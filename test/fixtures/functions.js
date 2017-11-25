@@ -2,7 +2,7 @@ module.exports = {
   describe: 'functions',
   coverageV8: {
     "scriptId": "71",
-    "url": "/Users/benjamincoe/bcoe/v8-to-istanbul/test/fixtures/scripts/functions.js",
+    "url": "./test/fixtures/scripts/functions.js",
     "functions": [
       {
         "functionName": "",
@@ -143,11 +143,47 @@ module.exports = {
       branches: [
         {
           startLine: 10,
-          startCol: 15,
+          startCol: 28,
           endLine: 10,
-          endCol: 20
+          endCol: 37,
+          count: 0
         }
       ]
     },
+    {
+      describe: "function that's called multiple times",
+      lines: [
+        {
+          startLine: 20,
+          endLine: 22,
+          count: 2
+        }
+      ]
+    },
+    {
+      describe: 'class that never has member functions called',
+      lines: [
+        {
+          startLine: 30,
+          endLine: 30,
+          count: 0
+        },
+        {
+          startLine: 33,
+          endLine: 33,
+          count: 0
+        }
+      ]
+    },
+    {
+      describe: 'class that has member functions called',
+      lines: [
+        {
+          startLine: 38,
+          endLine: 45,
+          count: 1
+        }
+      ]
+    }
   ]
 }
