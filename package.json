@@ -1,0 +1,31 @@
+{
+  "name": "v8-to-istanbul",
+  "version": "1.0.0",
+  "description": "convert from v8 coverage format to istanbul's format",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc mocha test/*.js",
+    "posttest": "standard"
+  },
+  "repository": {
+    "url": "git@github.com:bcoe/v8-to-istanbul.git"
+  },
+  "keywords": [
+    "istanbul",
+    "v8",
+    "coverage"
+  ],
+  "standard": {
+    "ignore": [
+      "**/test/fixtures"
+    ]
+  },
+  "author": "Ben Coe <ben@npmjs.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "nyc": "^11.3.0",
+    "standard": "^10.0.3"
+  }
+}
