@@ -1,8 +1,10 @@
 /* global describe, it */
 
 const toIstanbul = require('../../')
+const t = require('tap')
 
-require('chai').should()
+t.mochaGlobals()
+require('should')
 
 module.exports = (fixture) => {
   const script = toIstanbul(fixture.coverageV8.url)
@@ -16,13 +18,9 @@ module.exports = (fixture) => {
   describe(fixture.describe, () => {
     // run with DEBUG=true to output coverage information to
     // terminal; this is useful when writing new tests.
-    if (process.env.DEBUG === 'true') {
-      it('outputs debug information', () => {
-        console.info('------------------')
-        console.info(JSON.stringify(coverageIstanbul, null, 2))
-        console.info('------------------')
-      })
-    }
+    it('outputs debug information', () => {
+      t.matchSnapshot(coverageIstanbul)
+    })
 
     fixture.assertions.forEach(assertion => {
       describe(assertion.describe, () => {
