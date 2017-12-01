@@ -5,7 +5,8 @@ const path = require('path')
 const runFixture = require('./utils/run-fixture')
 const Script = require('../lib/script')
 
-require('chai').should()
+require('tap').mochaGlobals()
+require('should')
 
 describe('Script', () => {
   describe('constructor', () => {
