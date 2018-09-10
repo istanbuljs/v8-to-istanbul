@@ -8,7 +8,7 @@
     "test": "c8 --reporter=html --reporter=text tap test/*.js",
     "posttest": "standard",
     "release": "standard-version",
-    "coverage": "c8 --reporter=text-lcov tap test/*.js | coveralls"
+    "coverage": "c8 report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "url": "git@github.com:bcoe/v8-to-istanbul.git"
@@ -26,7 +26,7 @@
   "author": "Ben Coe <ben@npmjs.com>",
   "license": "ISC",
   "devDependencies": {
-    "c8": "^3.0.0-candidate.1",
+    "c8": "^3.0.0-candidate.2",
     "coveralls": "^3.0.2",
     "should": "^13.2.3",
     "standard": "^12.0.1",
