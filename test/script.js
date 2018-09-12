@@ -1,6 +1,6 @@
 /* global describe, it */
 
-const {readdirSync, lstatSync} = require('fs')
+const { readdirSync, lstatSync } = require('fs')
 const path = require('path')
 const runFixture = require('./utils/run-fixture')
 const Script = require('../lib/script')
