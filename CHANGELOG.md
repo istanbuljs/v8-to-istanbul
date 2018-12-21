@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/bcoe/v8-to-istanbul/compare/v1.2.1...v2.0.0) (2018-12-21)
+
+
+### Features
+
+* allow wrapper length to be configured ([#9](https://github.com/bcoe/v8-to-istanbul/issues/9)) ([5e76198](https://github.com/bcoe/v8-to-istanbul/commit/5e76198))
+
+
+### BREAKING CHANGES
+
+* we no longer attempt to detect ESM modules, rather the consumer sets a wrapper length
+
+
+
 <a name="1.2.1"></a>
 ## [1.2.1](https://github.com/bcoe/v8-to-istanbul/compare/v1.2.0...v1.2.1) (2018-09-12)
 
