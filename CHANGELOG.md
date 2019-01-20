@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.1"></a>
+## [2.0.1](https://github.com/bcoe/v8-to-istanbul/compare/v2.0.0...v2.0.1) (2019-01-20)
+
+
+### Bug Fixes
+
+* functions were not always counted ([#10](https://github.com/bcoe/v8-to-istanbul/issues/10)) ([464a1f0](https://github.com/bcoe/v8-to-istanbul/commit/464a1f0))
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/bcoe/v8-to-istanbul/compare/v1.2.1...v2.0.0) (2018-12-21)
 
