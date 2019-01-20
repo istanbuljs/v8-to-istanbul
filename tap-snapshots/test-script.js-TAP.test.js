@@ -196,8 +196,15 @@ exports[`test/script.js TAP > undefined 1`] = `
      '6': [ 0 ],
      '7': [ 1 ],
      '8': [ 0 ] },
-  fnMap: {},
-  f: {} }
+  fnMap:
+   { '0':
+      { name: 'e',
+        decl:
+         { start: { line: 19, column: 0 }, end: { line: 25, column: 1 } },
+        loc:
+         { start: { line: 19, column: 0 }, end: { line: 25, column: 1 } },
+        line: 19 } },
+  f: { '0': 1 } }
 `
 
 exports[`test/script.js TAP > undefined 2`] = `
@@ -467,6 +474,22 @@ exports[`test/script.js TAP > undefined 2`] = `
          { start: { line: 2, column: 0 }, end: { line: 6, column: 1 } },
         line: 2 },
      '1':
+      { name: 'b',
+        decl:
+         { start: { line: 9, column: 2 }, end: { line: 14, column: 3 } },
+        loc:
+         { start: { line: 9, column: 2 }, end: { line: 14, column: 3 } },
+        line: 9 },
+     '2':
+      { name: 'c',
+        decl:
+         { start: { line: 19, column: 10 },
+           end: { line: 23, column: 1 } },
+        loc:
+         { start: { line: 19, column: 10 },
+           end: { line: 23, column: 1 } },
+        line: 19 },
+     '3':
       { name: 'Foo',
         decl:
          { start: { line: 29, column: 14 },
@@ -475,12 +498,30 @@ exports[`test/script.js TAP > undefined 2`] = `
          { start: { line: 29, column: 14 },
            end: { line: 31, column: 3 } },
         line: 29 },
-     '2':
+     '4':
       { name: 'hello',
         decl:
          { start: { line: 32, column: 8 }, end: { line: 34, column: 3 } },
         loc:
          { start: { line: 32, column: 8 }, end: { line: 34, column: 3 } },
-        line: 32 } },
-  f: { '0': 0, '1': 0, '2': 0 } }
+        line: 32 },
+     '5':
+      { name: 'Bar',
+        decl:
+         { start: { line: 39, column: 16 },
+           end: { line: 41, column: 5 } },
+        loc:
+         { start: { line: 39, column: 16 },
+           end: { line: 41, column: 5 } },
+        line: 39 },
+     '6':
+      { name: 'hello',
+        decl:
+         { start: { line: 42, column: 10 },
+           end: { line: 44, column: 5 } },
+        loc:
+         { start: { line: 42, column: 10 },
+           end: { line: 44, column: 5 } },
+        line: 42 } },
+  f: { '0': 0, '1': 1, '2': 2, '3': 0, '4': 0, '5': 1, '6': 1 } }
 `
