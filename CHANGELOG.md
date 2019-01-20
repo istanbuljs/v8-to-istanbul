@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.2"></a>
+## [2.0.2](https://github.com/bcoe/v8-to-istanbul/compare/v2.0.1...v2.0.2) (2019-01-20)
+
+
+### Bug Fixes
+
+* windows has \r\n line separator ([#11](https://github.com/bcoe/v8-to-istanbul/issues/11)) ([c10b888](https://github.com/bcoe/v8-to-istanbul/commit/c10b888))
+
+
+
 <a name="2.0.1"></a>
 ## [2.0.1](https://github.com/bcoe/v8-to-istanbul/compare/v2.0.0...v2.0.1) (2019-01-20)
 
