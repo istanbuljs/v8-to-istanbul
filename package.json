@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "snapshot": "TAP_SNAPSHOT=1 tap test/*.js",
-    "test": "c8 --reporter=html --reporter=text tap test/*.js",
+    "test": "c8 --reporter=html --reporter=text tap --no-esm test/*.js",
     "posttest": "standard",
     "release": "standard-version",
     "coverage": "c8 report --reporter=text-lcov | coveralls"
@@ -26,11 +26,11 @@
   "author": "Ben Coe <ben@npmjs.com>",
   "license": "ISC",
   "devDependencies": {
-    "c8": "^3.3.0-candidate.2",
-    "coveralls": "^3.0.2",
+    "c8": "^3.4.0",
+    "coveralls": "^3.0.3",
     "should": "^13.2.3",
     "standard": "^12.0.1",
-    "standard-version": "^4.4.0",
+    "standard-version": "^5.0.1",
     "tap": "^12.6.0"
   },
   "engines": {

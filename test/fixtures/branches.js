@@ -68,19 +68,5 @@ module.exports = {
         "isBlockCoverage": true
       }
     ]
-  },
-  assertions: [
-    {
-      describe: 'basic binary operation',
-      branches: [
-        {
-          startLine: 2,
-          startCol: 13,
-          endLine: 2,
-          endCol: 18,
-          count: 0
-        }
-      ]
-    }
-  ]
+  }
 }
