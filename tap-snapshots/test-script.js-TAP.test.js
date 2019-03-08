@@ -525,3 +525,58 @@ exports[`test/script.js TAP > undefined 2`] = `
         line: 42 } },
   f: { '0': 0, '1': 1, '2': 2, '3': 0, '4': 0, '5': 1, '6': 1 } }
 `
+
+exports[`test/script.js TAP > undefined 3`] = `
+{ path: './test/fixtures/scripts/shebang.js',
+  statementMap:
+   { '0':
+      { start: { line: 1, column: 0 }, end: { line: 1, column: 19 } },
+     '1':
+      { start: { line: 2, column: 0 }, end: { line: 2, column: 12 } },
+     '2':
+      { start: { line: 3, column: 0 }, end: { line: 3, column: 0 } },
+     '3':
+      { start: { line: 4, column: 0 }, end: { line: 4, column: 19 } },
+     '4':
+      { start: { line: 5, column: 0 }, end: { line: 5, column: 25 } },
+     '5':
+      { start: { line: 6, column: 0 }, end: { line: 6, column: 1 } },
+     '6':
+      { start: { line: 7, column: 0 }, end: { line: 7, column: 0 } },
+     '7':
+      { start: { line: 8, column: 0 }, end: { line: 8, column: 7 } } },
+  s:
+   { '0': 1, '1': 1, '2': 1, '3': 1, '4': 1, '5': 1, '6': 1, '7': 1 },
+  branchMap:
+   { '0':
+      { type: 'branch',
+        line: undefined,
+        loc:
+         { start: { line: 1, column: 0 }, end: { line: 8, column: 7 } },
+        locations:
+         [ { start: { line: 1, column: 0 }, end: { line: 8, column: 7 } } ] },
+     '1':
+      { type: 'branch',
+        line: undefined,
+        loc:
+         { start: { line: 1, column: 0 }, end: { line: 8, column: 7 } },
+        locations:
+         [ { start: { line: 1, column: 0 }, end: { line: 8, column: 7 } } ] },
+     '2':
+      { type: 'branch',
+        line: undefined,
+        loc:
+         { start: { line: 4, column: 0 }, end: { line: 6, column: 1 } },
+        locations:
+         [ { start: { line: 4, column: 0 }, end: { line: 6, column: 1 } } ] } },
+  b: { '0': [ 1 ], '1': [ 1 ], '2': [ 1 ] },
+  fnMap:
+   { '0':
+      { name: 'hello',
+        decl:
+         { start: { line: 4, column: 0 }, end: { line: 6, column: 1 } },
+        loc:
+         { start: { line: 4, column: 0 }, end: { line: 6, column: 1 } },
+        line: 4 } },
+  f: { '0': 1 } }
+`

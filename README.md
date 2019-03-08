@@ -41,10 +41,3 @@ To execute tests, simply run:
 ```bash
 npm test
 ```
-
-To output istanbul coverage data while running tests (useful as you add
-new assertions), simply run:
-
-```bash
-DEBUG=true npm test
-```
