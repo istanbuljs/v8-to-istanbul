@@ -14,8 +14,8 @@ describe('Script', () => {
       const script = new Script(
         require.resolve('./fixtures/scripts/functions.js')
       )
-      script.lines.length.should.equal(49)
-      script.wrapperLength.should.equal(62) // common-js header.
+      script.lines.length.should.equal(48)
+      script.wrapperLength.should.equal(0) // common-js header.
     })
 
     it('handles ESM style paths', () => {
@@ -23,7 +23,7 @@ describe('Script', () => {
         `file://${require.resolve('./fixtures/scripts/functions.js')}`,
         0
       )
-      script.lines.length.should.equal(49)
+      script.lines.length.should.equal(48)
       script.wrapperLength.should.equal(0) // ESM header.
     })
   })
