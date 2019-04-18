@@ -511,6 +511,36 @@ exports[`test/script.js TAP > undefined 2`] = `
 `
 
 exports[`test/script.js TAP > undefined 3`] = `
+{ path: './test/fixtures/scripts/mixed-newlines.js',
+  statementMap:
+   { '0':
+      { start: { line: 1, column: 0 }, end: { line: 1, column: 3 } },
+     '1':
+      { start: { line: 2, column: 0 }, end: { line: 2, column: 5 } },
+     '2':
+      { start: { line: 3, column: 0 }, end: { line: 3, column: 1 } } },
+  s: { '0': 1, '1': 1, '2': 1 },
+  branchMap:
+   { '0':
+      { type: 'branch',
+        line: undefined,
+        loc:
+         { start: { line: 1, column: 0 }, end: { line: 3, column: 1 } },
+        locations:
+         [ { start: { line: 1, column: 0 }, end: { line: 3, column: 1 } } ] },
+     '1':
+      { type: 'branch',
+        line: undefined,
+        loc:
+         { start: { line: 1, column: 1 }, end: { line: 3, column: 1 } },
+        locations:
+         [ { start: { line: 1, column: 1 }, end: { line: 3, column: 1 } } ] } },
+  b: { '0': [ 1 ], '1': [ 1 ] },
+  fnMap: {},
+  f: {} }
+`
+
+exports[`test/script.js TAP > undefined 4`] = `
 { path: './test/fixtures/scripts/shebang.js',
   statementMap:
    { '0':
