@@ -1,5 +1,9 @@
 language: node_js
-node_js:
-  - "11"
-  - "10"
-after_success: npm run coverage
+jobs:
+  include:
+  - node_js: "11"
+    after_success: npm run coverage
+  - node_js: "10"
+    after_script: npm run coverage
+  allow_failures:
+  - node_js: "10"
