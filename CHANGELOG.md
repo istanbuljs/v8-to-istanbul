@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.5](https://github.com/bcoe/v8-to-istanbul/compare/v2.0.4...v2.0.5) (2019-04-18)
+
+
+### Bug Fixes
+
+* don't assume files to have CR characters on Windows ([#16](https://github.com/bcoe/v8-to-istanbul/issues/16)) ([c59a21a](https://github.com/bcoe/v8-to-istanbul/commit/c59a21a))
+
+
+
 ## [2.0.4](https://github.com/bcoe/v8-to-istanbul/compare/v2.0.3...v2.0.4) (2019-04-07)
 
 
