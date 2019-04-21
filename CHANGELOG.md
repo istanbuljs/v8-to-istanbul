@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [2.1.0](https://github.com/bcoe/v8-to-istanbul/compare/v2.0.5...v2.1.0) (2019-04-21)
+
+
+### Features
+
+* store source so that it can be used by SourceMaps ([#18](https://github.com/bcoe/v8-to-istanbul/issues/18)) ([5afafd6](https://github.com/bcoe/v8-to-istanbul/commit/5afafd6))
+
+
+
 ## [2.0.5](https://github.com/bcoe/v8-to-istanbul/compare/v2.0.4...v2.0.5) (2019-04-18)
 
 
