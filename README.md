@@ -14,6 +14,7 @@ const v8toIstanbul = require('v8-to-istanbul')
 // is loaded from disk and this is used to determine the original
 // line count.
 const script = v8toIstanbul('./path-to-instrumented-file.js')
+await script.load() // source-map is async, making this step necessary.
 // provide an array of coverage information in v8 format.
 script.applyCoverage([
   {

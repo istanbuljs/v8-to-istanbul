@@ -10,19 +10,21 @@ require('should')
 
 describe('Script', () => {
   describe('constructor', () => {
-    it('creates line instance for each line in script', () => {
+    it('creates line instance for each line in script', async () => {
       const script = new Script(
         require.resolve('./fixtures/scripts/functions.js')
       )
+      await script.load()
       script.lines.length.should.equal(48)
       script.wrapperLength.should.equal(0) // common-js header.
     })
 
-    it('handles ESM style paths', () => {
+    it('handles ESM style paths', async () => {
       const script = new Script(
         `file://${require.resolve('./fixtures/scripts/functions.js')}`,
         0
       )
+      await script.load()
       script.lines.length.should.equal(48)
       script.wrapperLength.should.equal(0) // ESM header.
     })

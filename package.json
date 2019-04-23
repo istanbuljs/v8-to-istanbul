@@ -35,5 +35,9 @@
   },
   "engines": {
     "node": ">=10.10.0"
+  },
+  "dependencies": {
+    "convert-source-map": "^1.6.0",
+    "source-map": "^0.7.3"
   }
 }

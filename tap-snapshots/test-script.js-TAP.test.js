@@ -580,3 +580,139 @@ exports[`test/script.js TAP > undefined 4`] = `
   fnMap: {},
   f: {} }
 `
+
+exports[`test/script.js TAP > undefined 5`] = `
+{ path: './test/fixtures/scripts/branches.covered.js',
+  statementMap:
+   { '0':
+      { start: { line: 1, column: 0 },
+        end: { line: 1, column: 2883 } },
+     '1':
+      { start: { line: 2, column: 0 }, end: { line: 2, column: 124 } },
+     '2':
+      { start: { line: 3, column: 0 }, end: { line: 3, column: 128 } },
+     '3':
+      { start: { line: 4, column: 0 }, end: { line: 4, column: 172 } },
+     '4':
+      { start: { line: 5, column: 0 }, end: { line: 5, column: 196 } },
+     '5':
+      { start: { line: 6, column: 0 }, end: { line: 6, column: 273 } },
+     '6':
+      { start: { line: 7, column: 0 }, end: { line: 7, column: 125 } },
+     '7':
+      { start: { line: 8, column: 0 },
+        end: { line: 8, column: 1732 } } },
+  s:
+   { '0': 1, '1': 1, '2': 1, '3': 1, '4': 1, '5': 1, '6': 1, '7': 0 },
+  branchMap:
+   { '0':
+      { type: 'branch',
+        line: undefined,
+        loc:
+         { start: { line: 1, column: 0 }, end: { line: 7, column: 125 } },
+        locations:
+         [ { start: { line: 1, column: 0 }, end: { line: 7, column: 125 } } ] },
+     '1':
+      { type: 'branch',
+        line: undefined,
+        loc:
+         { start: { line: 2, column: 60 }, end: { line: 2, column: 91 } },
+        locations:
+         [ { start: { line: 2, column: 60 }, end: { line: 2, column: 91 } } ] },
+     '2':
+      { type: 'branch',
+        line: undefined,
+        loc:
+         { start: { line: 3, column: 36 }, end: { line: 3, column: 71 } },
+        locations:
+         [ { start: { line: 3, column: 36 }, end: { line: 3, column: 71 } } ] },
+     '3':
+      { type: 'branch',
+        line: undefined,
+        loc:
+         { start: { line: 4, column: 123 },
+           end: { line: 4, column: 154 } },
+        locations:
+         [ { start: { line: 4, column: 123 },
+             end: { line: 4, column: 154 } } ] },
+     '4':
+      { type: 'branch',
+        line: undefined,
+        loc:
+         { start: { line: 5, column: 31 }, end: { line: 5, column: 93 } },
+        locations:
+         [ { start: { line: 5, column: 31 }, end: { line: 5, column: 93 } } ] },
+     '5':
+      { type: 'branch',
+        line: undefined,
+        loc:
+         { start: { line: 7, column: 92 },
+           end: { line: 7, column: 123 } },
+        locations:
+         [ { start: { line: 7, column: 92 },
+             end: { line: 7, column: 123 } } ] },
+     '6':
+      { type: 'branch',
+        line: undefined,
+        loc:
+         { start: { line: 1, column: 19 },
+           end: { line: 1, column: 2854 } },
+        locations:
+         [ { start: { line: 1, column: 19 },
+             end: { line: 1, column: 2854 } } ] },
+     '7':
+      { type: 'branch',
+        line: undefined,
+        loc:
+         { start: { line: 1, column: 2765 },
+           end: { line: 1, column: 2793 } },
+        locations:
+         [ { start: { line: 1, column: 2765 },
+             end: { line: 1, column: 2793 } } ] },
+     '8':
+      { type: 'branch',
+        line: undefined,
+        loc:
+         { start: { line: 1, column: 2794 },
+           end: { line: 1, column: 2818 } },
+        locations:
+         [ { start: { line: 1, column: 2794 },
+             end: { line: 1, column: 2818 } } ] },
+     '9':
+      { type: 'branch',
+        line: undefined,
+        loc:
+         { start: { line: 6, column: 0 }, end: { line: 6, column: 201 } },
+        locations:
+         [ { start: { line: 6, column: 0 }, end: { line: 6, column: 201 } } ] },
+     '10':
+      { type: 'branch',
+        line: undefined,
+        loc:
+         { start: { line: 6, column: 134 },
+           end: { line: 6, column: 200 } },
+        locations:
+         [ { start: { line: 6, column: 134 },
+             end: { line: 6, column: 200 } } ] } },
+  b:
+   { '0': [ 1 ],
+     '1': [ 0 ],
+     '2': [ 0 ],
+     '3': [ 0 ],
+     '4': [ 0 ],
+     '5': [ 0 ],
+     '6': [ 1 ],
+     '7': [ 0 ],
+     '8': [ 0 ],
+     '9': [ 1 ],
+     '10': [ 0 ] },
+  fnMap:
+   { '0':
+      { name: 'e',
+        decl:
+         { start: { line: 6, column: 0 }, end: { line: 6, column: 201 } },
+        loc:
+         { start: { line: 6, column: 0 }, end: { line: 6, column: 201 } },
+        line: 6 } },
+  f: { '0': 1 } }
+`

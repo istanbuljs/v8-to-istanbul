@@ -6,8 +6,9 @@ const t = require('tap')
 t.mochaGlobals()
 require('should')
 
-module.exports = (fixture) => {
+module.exports = async (fixture) => {
   const script = toIstanbul(fixture.coverageV8.url)
+  await script.load()
   script.applyCoverage(fixture.coverageV8.functions)
 
   let coverageIstanbul = script.toIstanbul()
@@ -16,8 +17,6 @@ module.exports = (fixture) => {
   coverageIstanbul = coverageIstanbul[Object.keys(coverageIstanbul)[0]]
 
   describe(fixture.describe, () => {
-    // run with DEBUG=true to output coverage information to
-    // terminal; this is useful when writing new tests.
     it('matches snapshot', () => {
       t.matchSnapshot(coverageIstanbul)
     })
