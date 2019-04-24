@@ -662,118 +662,126 @@ exports[`test/v8-to-istanbul.js TAP > undefined 5`] = `
         end: { line: 31, column: 10 } } },
   s:
    { '0': 0,
-     '1': 1,
-     '2': 1,
-     '3': 1,
-     '4': 1,
-     '5': 1,
-     '6': 1,
-     '7': 1,
-     '8': 1,
-     '9': 1,
-     '10': 1,
+     '1': 0,
+     '2': 0,
+     '3': 0,
+     '4': 0,
+     '5': 0,
+     '6': 0,
+     '7': 0,
+     '8': 0,
+     '9': 0,
+     '10': 0,
      '11': 0,
      '12': 0,
-     '13': 1,
-     '14': 1,
-     '15': 1,
-     '16': 1,
-     '17': 1,
-     '18': 1,
-     '19': 1,
-     '20': 0,
-     '21': 0,
-     '22': 0,
-     '23': 0,
+     '13': 0,
+     '14': 0,
+     '15': 0,
+     '16': 0,
+     '17': 0,
+     '18': 0,
+     '19': 0,
+     '20': 1,
+     '21': 1,
+     '22': 1,
+     '23': 1,
      '24': 1,
      '25': 1,
      '26': 1,
      '27': 1,
-     '28': 1,
+     '28': 0,
      '29': 0,
      '30': 0 },
   branchMap:
    { '0':
       { type: 'branch',
-        line: 1,
+        line: 31,
         loc:
-         { start: { line: 1, column: 0 }, end: { line: 30, column: 6 } },
+         { start: { line: 31, column: 10 },
+           end: { line: 31, column: 10 } },
         locations:
-         [ { start: { line: 1, column: 0 }, end: { line: 30, column: 6 } } ] },
+         [ { start: { line: 31, column: 10 },
+             end: { line: 31, column: 10 } } ] },
      '1':
-      { type: 'branch',
-        line: 2,
-        loc:
-         { start: { line: 2, column: 10 }, end: { line: 2, column: 16 } },
-        locations:
-         [ { start: { line: 2, column: 10 }, end: { line: 2, column: 16 } } ] },
-     '2':
       { type: 'branch',
         line: 5,
         loc:
-         { start: { line: 5, column: 10 }, end: { line: 5, column: 18 } },
+         { start: { line: 5, column: 7 }, end: { line: 5, column: 18 } },
         locations:
-         [ { start: { line: 5, column: 10 }, end: { line: 5, column: 18 } } ] },
-     '3':
+         [ { start: { line: 5, column: 7 }, end: { line: 5, column: 18 } } ] },
+     '2':
       { type: 'branch',
         line: 8,
         loc:
-         { start: { line: 8, column: 10 }, end: { line: 8, column: 11 } },
+         { start: { line: 8, column: 0 }, end: { line: 8, column: 11 } },
         locations:
-         [ { start: { line: 8, column: 10 }, end: { line: 8, column: 11 } } ] },
-     '4':
+         [ { start: { line: 8, column: 0 }, end: { line: 8, column: 11 } } ] },
+     '3':
       { type: 'branch',
         line: 11,
         loc:
          { start: { line: 11, column: 11 },
-           end: { line: 13, column: 1 } },
+           end: { line: 12, column: 12 } },
         locations:
          [ { start: { line: 11, column: 11 },
-             end: { line: 13, column: 1 } } ] },
+             end: { line: 12, column: 12 } } ] },
+     '4':
+      { type: 'branch',
+        line: 14,
+        loc:
+         { start: { line: 14, column: 7 },
+           end: { line: 18, column: 28 } },
+        locations:
+         [ { start: { line: 14, column: 7 },
+             end: { line: 18, column: 28 } } ] },
      '5':
       { type: 'branch',
-        line: 30,
+        line: 31,
         loc:
-         { start: { line: 30, column: 10 },
-           end: { line: 30, column: 15 } },
+         { start: { line: 31, column: 10 },
+           end: { line: 31, column: 10 } },
         locations:
-         [ { start: { line: 30, column: 10 },
-             end: { line: 30, column: 15 } } ] },
+         [ { start: { line: 31, column: 10 },
+             end: { line: 31, column: 10 } } ] },
      '6':
       { type: 'branch',
         line: 1,
         loc:
-         { start: { line: 1, column: 0 }, end: { line: 1, column: 26 } },
+         { start: { line: 1, column: 0 }, end: { line: 2, column: 16 } },
         locations:
-         [ { start: { line: 1, column: 0 }, end: { line: 1, column: 26 } } ] },
+         [ { start: { line: 1, column: 0 }, end: { line: 2, column: 16 } } ] },
      '7':
       { type: 'branch',
         line: 1,
         loc:
-         { start: { line: 1, column: 0 }, end: { line: 1, column: 26 } },
+         { start: { line: 1, column: 0 }, end: { line: 2, column: 6 } },
         locations:
-         [ { start: { line: 1, column: 0 }, end: { line: 1, column: 26 } } ] },
+         [ { start: { line: 1, column: 0 }, end: { line: 2, column: 6 } } ] },
      '8':
       { type: 'branch',
-        line: 1,
+        line: 2,
         loc:
-         { start: { line: 1, column: 0 }, end: { line: 1, column: 26 } },
+         { start: { line: 2, column: 0 }, end: { line: 2, column: 10 } },
         locations:
-         [ { start: { line: 1, column: 0 }, end: { line: 1, column: 26 } } ] },
+         [ { start: { line: 2, column: 0 }, end: { line: 2, column: 10 } } ] },
      '9':
-      { type: 'branch',
-        line: 19,
-        loc:
-         { start: { line: 19, column: 0 }, end: { line: 25, column: 1 } },
-        locations:
-         [ { start: { line: 19, column: 0 }, end: { line: 25, column: 1 } } ] },
-     '10':
       { type: 'branch',
         line: 20,
         loc:
-         { start: { line: 20, column: 2 }, end: { line: 24, column: 3 } },
+         { start: { line: 20, column: 12 },
+           end: { line: 30, column: 10 } },
         locations:
-         [ { start: { line: 20, column: 2 }, end: { line: 24, column: 3 } } ] } },
+         [ { start: { line: 20, column: 12 },
+             end: { line: 30, column: 10 } } ] },
+     '10':
+      { type: 'branch',
+        line: 29,
+        loc:
+         { start: { line: 29, column: 0 },
+           end: { line: 30, column: 10 } },
+        locations:
+         [ { start: { line: 29, column: 0 },
+             end: { line: 30, column: 10 } } ] } },
   b:
    { '0': [ 1 ],
      '1': [ 0 ],
@@ -790,9 +798,11 @@ exports[`test/v8-to-istanbul.js TAP > undefined 5`] = `
    { '0':
       { name: 'e',
         decl:
-         { start: { line: 19, column: 0 }, end: { line: 25, column: 1 } },
+         { start: { line: 20, column: 12 },
+           end: { line: 30, column: 10 } },
         loc:
-         { start: { line: 19, column: 0 }, end: { line: 25, column: 1 } },
-        line: 19 } },
+         { start: { line: 20, column: 12 },
+           end: { line: 30, column: 10 } },
+        line: 20 } },
   f: { '0': 1 } }
 `
