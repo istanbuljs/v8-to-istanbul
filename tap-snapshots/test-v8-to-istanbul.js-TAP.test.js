@@ -582,8 +582,7 @@ exports[`test/v8-to-istanbul.js TAP > undefined 4`] = `
 `
 
 exports[`test/v8-to-istanbul.js TAP > undefined 5`] = `
-{ path:
-   '/usr/local/google/home/bencoe/oss/v8-to-istanbul/test/fixtures/scripts/branches.js',
+{ path: './test/fixtures/scripts/branches.js',
   statementMap:
    { '0':
       { start: { line: 1, column: 0 }, end: { line: 1, column: 26 } },
