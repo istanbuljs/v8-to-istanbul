@@ -3,30 +3,30 @@
 const { readdirSync, lstatSync } = require('fs')
 const path = require('path')
 const runFixture = require('./utils/run-fixture')
-const Script = require('../lib/script')
+const V8ToIstanbul = require('../lib/v8-to-istanbul')
 
 require('tap').mochaGlobals()
 require('should')
 
-describe('Script', () => {
+describe('V8ToIstanbul', () => {
   describe('constructor', () => {
-    it('creates line instance for each line in script', async () => {
-      const script = new Script(
+    it('creates line instance for each line in V8ToIstanbul', async () => {
+      const v8ToIstanbul = new V8ToIstanbul(
         require.resolve('./fixtures/scripts/functions.js')
       )
-      await script.load()
-      script.lines.length.should.equal(48)
-      script.wrapperLength.should.equal(0) // common-js header.
+      await v8ToIstanbul.load()
+      v8ToIstanbul.source.lines.length.should.equal(48)
+      v8ToIstanbul.wrapperLength.should.equal(0) // common-js header.
     })
 
     it('handles ESM style paths', async () => {
-      const script = new Script(
+      const v8ToIstanbul = new V8ToIstanbul(
         `file://${require.resolve('./fixtures/scripts/functions.js')}`,
         0
       )
-      await script.load()
-      script.lines.length.should.equal(48)
-      script.wrapperLength.should.equal(0) // ESM header.
+      await v8ToIstanbul.load()
+      v8ToIstanbul.source.lines.length.should.equal(48)
+      v8ToIstanbul.wrapperLength.should.equal(0) // ESM header.
     })
   })
 

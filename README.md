@@ -10,13 +10,12 @@ converts from v8 coverage format to [istanbul's coverage format](https://github.
 
 ```js
 const v8toIstanbul = require('v8-to-istanbul')
-// create a script object from a source-file. the source file
-// is loaded from disk and this is used to determine the original
-// line count.
-const script = v8toIstanbul('./path-to-instrumented-file.js')
-await script.load() // source-map is async, making this step necessary.
+// the path to the original source-file is required, as its contents are
+// used during the conversion algorithm.
+const converter = v8toIstanbul('./path-to-instrumented-file.js')
+await converter.load() // this is required due to the async source-map dependency.
 // provide an array of coverage information in v8 format.
-script.applyCoverage([
+converter.applyCoverage([
   {
     "functionName": "",
     "ranges": [
@@ -32,7 +31,7 @@ script.applyCoverage([
 ])
 // output coverage information in a form that can
 // be consumed by Istanbul.
-console.info(JSON.stringify(script.toIstanbul()))
+console.info(JSON.stringify(converter.toIstanbul()))
 ```
 
 ## Testing
