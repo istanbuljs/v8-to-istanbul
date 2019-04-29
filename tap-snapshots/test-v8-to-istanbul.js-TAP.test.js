@@ -5,7 +5,7 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
-exports[`test/script.js TAP > undefined 1`] = `
+exports[`test/v8-to-istanbul.js TAP > undefined 1`] = `
 { path: './test/fixtures/scripts/branches.js',
   statementMap:
    { '0':
@@ -118,42 +118,42 @@ exports[`test/script.js TAP > undefined 1`] = `
   branchMap:
    { '0':
       { type: 'branch',
-        line: undefined,
+        line: 1,
         loc:
          { start: { line: 1, column: 0 }, end: { line: 31, column: 10 } },
         locations:
          [ { start: { line: 1, column: 0 }, end: { line: 31, column: 10 } } ] },
      '1':
       { type: 'branch',
-        line: undefined,
+        line: 1,
         loc:
          { start: { line: 1, column: 1 }, end: { line: 31, column: 10 } },
         locations:
          [ { start: { line: 1, column: 1 }, end: { line: 31, column: 10 } } ] },
      '2':
       { type: 'branch',
-        line: undefined,
+        line: 5,
         loc:
          { start: { line: 5, column: 23 }, end: { line: 5, column: 28 } },
         locations:
          [ { start: { line: 5, column: 23 }, end: { line: 5, column: 28 } } ] },
      '3':
       { type: 'branch',
-        line: undefined,
+        line: 8,
         loc:
          { start: { line: 8, column: 22 }, end: { line: 8, column: 29 } },
         locations:
          [ { start: { line: 8, column: 22 }, end: { line: 8, column: 29 } } ] },
      '4':
       { type: 'branch',
-        line: undefined,
+        line: 14,
         loc:
          { start: { line: 14, column: 8 }, end: { line: 15, column: 4 } },
         locations:
          [ { start: { line: 14, column: 8 }, end: { line: 15, column: 4 } } ] },
      '5':
       { type: 'branch',
-        line: undefined,
+        line: 18,
         loc:
          { start: { line: 18, column: 3 },
            end: { line: 18, column: 21 } },
@@ -162,14 +162,14 @@ exports[`test/script.js TAP > undefined 1`] = `
              end: { line: 18, column: 21 } } ] },
      '6':
       { type: 'branch',
-        line: undefined,
+        line: 22,
         loc:
          { start: { line: 22, column: 8 }, end: { line: 30, column: 8 } },
         locations:
          [ { start: { line: 22, column: 8 }, end: { line: 30, column: 8 } } ] },
      '7':
       { type: 'branch',
-        line: undefined,
+        line: 29,
         loc:
          { start: { line: 29, column: 31 },
            end: { line: 30, column: 6 } },
@@ -196,7 +196,7 @@ exports[`test/script.js TAP > undefined 1`] = `
   f: { '0': 1 } }
 `
 
-exports[`test/script.js TAP > undefined 2`] = `
+exports[`test/v8-to-istanbul.js TAP > undefined 2`] = `
 { path: './test/fixtures/scripts/functions.js',
   statementMap:
    { '0':
@@ -368,21 +368,21 @@ exports[`test/script.js TAP > undefined 2`] = `
   branchMap:
    { '0':
       { type: 'branch',
-        line: undefined,
+        line: 1,
         loc:
          { start: { line: 1, column: 0 }, end: { line: 48, column: 9 } },
         locations:
          [ { start: { line: 1, column: 0 }, end: { line: 48, column: 9 } } ] },
      '1':
       { type: 'branch',
-        line: undefined,
+        line: 1,
         loc:
          { start: { line: 1, column: 1 }, end: { line: 48, column: 9 } },
         locations:
          [ { start: { line: 1, column: 1 }, end: { line: 48, column: 9 } } ] },
      '2':
       { type: 'branch',
-        line: undefined,
+        line: 11,
         loc:
          { start: { line: 11, column: 8 },
            end: { line: 19, column: 13 } },
@@ -391,14 +391,14 @@ exports[`test/script.js TAP > undefined 2`] = `
              end: { line: 19, column: 13 } } ] },
      '3':
       { type: 'branch',
-        line: undefined,
+        line: 13,
         loc:
          { start: { line: 13, column: 6 }, end: { line: 14, column: 1 } },
         locations:
          [ { start: { line: 13, column: 6 }, end: { line: 14, column: 1 } } ] },
      '4':
       { type: 'branch',
-        line: undefined,
+        line: 18,
         loc:
          { start: { line: 18, column: 32 },
            end: { line: 18, column: 37 } },
@@ -407,7 +407,7 @@ exports[`test/script.js TAP > undefined 2`] = `
              end: { line: 18, column: 37 } } ] },
      '5':
       { type: 'branch',
-        line: undefined,
+        line: 19,
         loc:
          { start: { line: 19, column: 9 },
            end: { line: 19, column: 12 } },
@@ -416,14 +416,14 @@ exports[`test/script.js TAP > undefined 2`] = `
              end: { line: 19, column: 12 } } ] },
      '6':
       { type: 'branch',
-        line: undefined,
+        line: 27,
         loc:
          { start: { line: 27, column: 1 }, end: { line: 28, column: 1 } },
         locations:
          [ { start: { line: 27, column: 1 }, end: { line: 28, column: 1 } } ] },
      '7':
       { type: 'branch',
-        line: undefined,
+        line: 43,
         loc:
          { start: { line: 43, column: 15 },
            end: { line: 44, column: 5 } },
@@ -432,7 +432,7 @@ exports[`test/script.js TAP > undefined 2`] = `
              end: { line: 44, column: 5 } } ] },
      '8':
       { type: 'branch',
-        line: undefined,
+        line: 47,
         loc:
          { start: { line: 47, column: 5 }, end: { line: 48, column: 9 } },
         locations:
@@ -510,7 +510,7 @@ exports[`test/script.js TAP > undefined 2`] = `
   f: { '0': 0, '1': 1, '2': 2, '3': 0, '4': 0, '5': 1, '6': 1 } }
 `
 
-exports[`test/script.js TAP > undefined 3`] = `
+exports[`test/v8-to-istanbul.js TAP > undefined 3`] = `
 { path: './test/fixtures/scripts/mixed-newlines.js',
   statementMap:
    { '0':
@@ -523,14 +523,14 @@ exports[`test/script.js TAP > undefined 3`] = `
   branchMap:
    { '0':
       { type: 'branch',
-        line: undefined,
+        line: 1,
         loc:
          { start: { line: 1, column: 0 }, end: { line: 3, column: 1 } },
         locations:
          [ { start: { line: 1, column: 0 }, end: { line: 3, column: 1 } } ] },
      '1':
       { type: 'branch',
-        line: undefined,
+        line: 1,
         loc:
          { start: { line: 1, column: 1 }, end: { line: 3, column: 1 } },
         locations:
@@ -540,7 +540,7 @@ exports[`test/script.js TAP > undefined 3`] = `
   f: {} }
 `
 
-exports[`test/script.js TAP > undefined 4`] = `
+exports[`test/v8-to-istanbul.js TAP > undefined 4`] = `
 { path: './test/fixtures/scripts/shebang.js',
   statementMap:
    { '0':
@@ -564,14 +564,14 @@ exports[`test/script.js TAP > undefined 4`] = `
   branchMap:
    { '0':
       { type: 'branch',
-        line: undefined,
+        line: 1,
         loc:
          { start: { line: 1, column: 19 }, end: { line: 8, column: 7 } },
         locations:
          [ { start: { line: 1, column: 19 }, end: { line: 8, column: 7 } } ] },
      '1':
       { type: 'branch',
-        line: undefined,
+        line: 2,
         loc:
          { start: { line: 2, column: 0 }, end: { line: 8, column: 7 } },
         locations:
@@ -579,4 +579,229 @@ exports[`test/script.js TAP > undefined 4`] = `
   b: { '0': [ 1 ], '1': [ 1 ] },
   fnMap: {},
   f: {} }
+`
+
+exports[`test/v8-to-istanbul.js TAP > undefined 5`] = `
+{ path: 'test/fixtures/scripts/branches.js',
+  statementMap:
+   { '0':
+      { start: { line: 1, column: 0 }, end: { line: 1, column: 26 } },
+     '1':
+      { start: { line: 2, column: 0 }, end: { line: 2, column: 18 } },
+     '2':
+      { start: { line: 3, column: 0 }, end: { line: 3, column: 0 } },
+     '3':
+      { start: { line: 4, column: 0 }, end: { line: 4, column: 31 } },
+     '4':
+      { start: { line: 5, column: 0 }, end: { line: 5, column: 37 } },
+     '5':
+      { start: { line: 6, column: 0 }, end: { line: 6, column: 0 } },
+     '6':
+      { start: { line: 7, column: 0 }, end: { line: 7, column: 18 } },
+     '7':
+      { start: { line: 8, column: 0 }, end: { line: 8, column: 31 } },
+     '8':
+      { start: { line: 9, column: 0 }, end: { line: 9, column: 0 } },
+     '9':
+      { start: { line: 10, column: 0 },
+        end: { line: 10, column: 16 } },
+     '10':
+      { start: { line: 11, column: 0 },
+        end: { line: 11, column: 12 } },
+     '11':
+      { start: { line: 12, column: 0 },
+        end: { line: 12, column: 14 } },
+     '12':
+      { start: { line: 13, column: 0 }, end: { line: 13, column: 1 } },
+     '13':
+      { start: { line: 14, column: 0 }, end: { line: 14, column: 8 } },
+     '14':
+      { start: { line: 15, column: 0 },
+        end: { line: 15, column: 25 } },
+     '15':
+      { start: { line: 16, column: 0 }, end: { line: 16, column: 3 } },
+     '16':
+      { start: { line: 17, column: 0 }, end: { line: 17, column: 0 } },
+     '17':
+      { start: { line: 18, column: 0 },
+        end: { line: 18, column: 28 } },
+     '18':
+      { start: { line: 19, column: 0 },
+        end: { line: 19, column: 15 } },
+     '19':
+      { start: { line: 20, column: 0 },
+        end: { line: 20, column: 13 } },
+     '20':
+      { start: { line: 21, column: 0 },
+        end: { line: 21, column: 23 } },
+     '21':
+      { start: { line: 22, column: 0 },
+        end: { line: 22, column: 10 } },
+     '22':
+      { start: { line: 23, column: 0 },
+        end: { line: 23, column: 16 } },
+     '23':
+      { start: { line: 24, column: 0 }, end: { line: 24, column: 3 } },
+     '24':
+      { start: { line: 25, column: 0 }, end: { line: 25, column: 1 } },
+     '25':
+      { start: { line: 26, column: 0 }, end: { line: 26, column: 0 } },
+     '26':
+      { start: { line: 27, column: 0 }, end: { line: 27, column: 3 } },
+     '27':
+      { start: { line: 28, column: 0 }, end: { line: 28, column: 0 } },
+     '28':
+      { start: { line: 29, column: 0 },
+        end: { line: 29, column: 46 } },
+     '29':
+      { start: { line: 30, column: 0 },
+        end: { line: 30, column: 15 } },
+     '30':
+      { start: { line: 31, column: 0 },
+        end: { line: 31, column: 10 } } },
+  s:
+   { '0': 0,
+     '1': 1,
+     '2': 1,
+     '3': 1,
+     '4': 1,
+     '5': 1,
+     '6': 1,
+     '7': 1,
+     '8': 1,
+     '9': 1,
+     '10': 1,
+     '11': 1,
+     '12': 1,
+     '13': 1,
+     '14': 0,
+     '15': 0,
+     '16': 0,
+     '17': 0,
+     '18': 1,
+     '19': 1,
+     '20': 1,
+     '21': 1,
+     '22': 1,
+     '23': 1,
+     '24': 1,
+     '25': 1,
+     '26': 1,
+     '27': 1,
+     '28': 0,
+     '29': 1,
+     '30': 1 },
+  branchMap:
+   { '0':
+      { type: 'branch',
+        line: 31,
+        loc:
+         { start: { line: 31, column: 10 },
+           end: { line: 31, column: 10 } },
+        locations:
+         [ { start: { line: 31, column: 10 },
+             end: { line: 31, column: 10 } } ] },
+     '1':
+      { type: 'branch',
+        line: 5,
+        loc:
+         { start: { line: 5, column: 7 }, end: { line: 5, column: 18 } },
+        locations:
+         [ { start: { line: 5, column: 7 }, end: { line: 5, column: 18 } } ] },
+     '2':
+      { type: 'branch',
+        line: 8,
+        loc:
+         { start: { line: 8, column: 0 }, end: { line: 8, column: 11 } },
+        locations:
+         [ { start: { line: 8, column: 0 }, end: { line: 8, column: 11 } } ] },
+     '3':
+      { type: 'branch',
+        line: 11,
+        loc:
+         { start: { line: 11, column: 11 },
+           end: { line: 12, column: 12 } },
+        locations:
+         [ { start: { line: 11, column: 11 },
+             end: { line: 12, column: 12 } } ] },
+     '4':
+      { type: 'branch',
+        line: 14,
+        loc:
+         { start: { line: 14, column: 7 },
+           end: { line: 18, column: 28 } },
+        locations:
+         [ { start: { line: 14, column: 7 },
+             end: { line: 18, column: 28 } } ] },
+     '5':
+      { type: 'branch',
+        line: 31,
+        loc:
+         { start: { line: 31, column: 10 },
+           end: { line: 31, column: 10 } },
+        locations:
+         [ { start: { line: 31, column: 10 },
+             end: { line: 31, column: 10 } } ] },
+     '6':
+      { type: 'branch',
+        line: 1,
+        loc:
+         { start: { line: 1, column: 0 }, end: { line: 2, column: 16 } },
+        locations:
+         [ { start: { line: 1, column: 0 }, end: { line: 2, column: 16 } } ] },
+     '7':
+      { type: 'branch',
+        line: 1,
+        loc:
+         { start: { line: 1, column: 0 }, end: { line: 2, column: 6 } },
+        locations:
+         [ { start: { line: 1, column: 0 }, end: { line: 2, column: 6 } } ] },
+     '8':
+      { type: 'branch',
+        line: 2,
+        loc:
+         { start: { line: 2, column: 0 }, end: { line: 2, column: 10 } },
+        locations:
+         [ { start: { line: 2, column: 0 }, end: { line: 2, column: 10 } } ] },
+     '9':
+      { type: 'branch',
+        line: 20,
+        loc:
+         { start: { line: 20, column: 12 },
+           end: { line: 30, column: 10 } },
+        locations:
+         [ { start: { line: 20, column: 12 },
+             end: { line: 30, column: 10 } } ] },
+     '10':
+      { type: 'branch',
+        line: 29,
+        loc:
+         { start: { line: 29, column: 0 },
+           end: { line: 30, column: 10 } },
+        locations:
+         [ { start: { line: 29, column: 0 },
+             end: { line: 30, column: 10 } } ] } },
+  b:
+   { '0': [ 1 ],
+     '1': [ 0 ],
+     '2': [ 0 ],
+     '3': [ 0 ],
+     '4': [ 0 ],
+     '5': [ 0 ],
+     '6': [ 1 ],
+     '7': [ 0 ],
+     '8': [ 0 ],
+     '9': [ 1 ],
+     '10': [ 0 ] },
+  fnMap:
+   { '0':
+      { name: 'e',
+        decl:
+         { start: { line: 20, column: 12 },
+           end: { line: 30, column: 10 } },
+        loc:
+         { start: { line: 20, column: 12 },
+           end: { line: 30, column: 10 } },
+        line: 20 } },
+  f: { '0': 1 } }
 `
