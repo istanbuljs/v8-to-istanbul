@@ -4,23 +4,13 @@ All notable changes to this project will be documented in this file. See [standa
 
 # [3.0.0](https://github.com/bcoe/v8-to-istanbul/compare/v2.0.2...v3.0.0) (2019-04-29)
 
-
-### Bug Fixes
-
-* don't assume files to have CR characters on Windows ([#16](https://github.com/bcoe/v8-to-istanbul/issues/16)) ([c59a21a](https://github.com/bcoe/v8-to-istanbul/commit/c59a21a))
-* Node 11 no longer wraps scripts by default ([#15](https://github.com/bcoe/v8-to-istanbul/issues/15)) ([fbbd113](https://github.com/bcoe/v8-to-istanbul/commit/fbbd113))
-
-
 ### Features
 
 * initial support for source-maps ([#19](https://github.com/bcoe/v8-to-istanbul/issues/19)) ([ab0fcdd](https://github.com/bcoe/v8-to-istanbul/commit/ab0fcdd))
-* store source so that it can be used by SourceMaps ([#18](https://github.com/bcoe/v8-to-istanbul/issues/18)) ([5afafd6](https://github.com/bcoe/v8-to-istanbul/commit/5afafd6))
-
 
 ### BREAKING CHANGES
 
 * v8-to-istanbul is now async, making it possible to use the latest source-map library
-
 
 
 # [2.1.0](https://github.com/bcoe/v8-to-istanbul/compare/v2.0.5...v2.1.0) (2019-04-21)
