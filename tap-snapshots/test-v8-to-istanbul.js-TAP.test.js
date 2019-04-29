@@ -582,7 +582,8 @@ exports[`test/v8-to-istanbul.js TAP > undefined 4`] = `
 `
 
 exports[`test/v8-to-istanbul.js TAP > undefined 5`] = `
-{ path: './test/fixtures/scripts/branches.js',
+{ path:
+   '/Users/bencoe/oss/v8-to-istanbul/test/fixtures/scripts/branches.js',
   statementMap:
    { '0':
       { start: { line: 1, column: 0 }, end: { line: 1, column: 26 } },
@@ -661,25 +662,25 @@ exports[`test/v8-to-istanbul.js TAP > undefined 5`] = `
         end: { line: 31, column: 10 } } },
   s:
    { '0': 0,
-     '1': 0,
-     '2': 0,
-     '3': 0,
-     '4': 0,
-     '5': 0,
-     '6': 0,
-     '7': 0,
-     '8': 0,
-     '9': 0,
-     '10': 0,
-     '11': 0,
-     '12': 0,
-     '13': 0,
+     '1': 1,
+     '2': 1,
+     '3': 1,
+     '4': 1,
+     '5': 1,
+     '6': 1,
+     '7': 1,
+     '8': 1,
+     '9': 1,
+     '10': 1,
+     '11': 1,
+     '12': 1,
+     '13': 1,
      '14': 0,
      '15': 0,
      '16': 0,
      '17': 0,
-     '18': 0,
-     '19': 0,
+     '18': 1,
+     '19': 1,
      '20': 1,
      '21': 1,
      '22': 1,
@@ -689,8 +690,8 @@ exports[`test/v8-to-istanbul.js TAP > undefined 5`] = `
      '26': 1,
      '27': 1,
      '28': 0,
-     '29': 0,
-     '30': 0 },
+     '29': 1,
+     '30': 1 },
   branchMap:
    { '0':
       { type: 'branch',
