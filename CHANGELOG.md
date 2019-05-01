@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.1](https://github.com/bcoe/v8-to-istanbul/compare/v3.0.0...v3.0.1) (2019-05-01)
+
+
+### Bug Fixes
+
+* initial column could be 0 on Node 10, after wrapper taken into account ([#22](https://github.com/bcoe/v8-to-istanbul/issues/22)) ([aa3f73b](https://github.com/bcoe/v8-to-istanbul/commit/aa3f73b))
+
+
+
 # [3.0.0](https://github.com/bcoe/v8-to-istanbul/compare/v2.0.2...v3.0.0) (2019-04-29)
 
 ### Features
