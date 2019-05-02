@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.2](https://github.com/bcoe/v8-to-istanbul/compare/v3.1.1...v3.1.2) (2019-05-02)
+
+
+### Bug Fixes
+
+* the line with the ignore comment itself should be skipped ([#25](https://github.com/bcoe/v8-to-istanbul/issues/25)) ([e939594](https://github.com/bcoe/v8-to-istanbul/commit/e939594))
+
+
+
 ## [3.1.1](https://github.com/bcoe/v8-to-istanbul/compare/v3.1.0...v3.1.1) (2019-05-02)
 
 
