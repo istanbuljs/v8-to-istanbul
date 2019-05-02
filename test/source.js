@@ -42,7 +42,8 @@ describe('Source', () => {
       const a = 99
       `
       const source = new CovSource(sourceRaw, 0)
-      source.lines[2].ignore.should.equal(false)
+      source.lines[1].ignore.should.equal(false)
+      source.lines[2].ignore.should.equal(true)
       source.lines[3].ignore.should.equal(true)
     })
 
@@ -53,6 +54,7 @@ describe('Source', () => {
       const a = 99
       `
       const source = new CovSource(sourceRaw, 0)
+      source.lines[1].ignore.should.equal(true)
       source.lines[2].ignore.should.equal(true)
       source.lines[3].ignore.should.equal(true)
     })
