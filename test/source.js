@@ -33,4 +33,38 @@ describe('Source', () => {
       source.relativeToOffset(1, Infinity).should.equal(1)
     })
   })
+
+  describe('ignore', () => {
+    it('ignores the next line if /* c8 ignore next */ is on its own line', () => {
+      const sourceRaw = `
+      const a = 33
+      /* c8 ignore next */
+      const a = 99
+      `
+      const source = new CovSource(sourceRaw, 0)
+      source.lines[2].ignore.should.equal(false)
+      source.lines[3].ignore.should.equal(true)
+    })
+
+    it('ignores the next N lines if /* c8 ignore next N */ is used', () => {
+      const sourceRaw = `
+      /* c8 ignore next 2 */
+      const a = 33
+      const a = 99
+      `
+      const source = new CovSource(sourceRaw, 0)
+      source.lines[2].ignore.should.equal(true)
+      source.lines[3].ignore.should.equal(true)
+    })
+
+    it('ignores a line that contains /* c8 ignore next */', () => {
+      const sourceRaw = `
+      const a = foo ? true /* c8 ignore next */ : false
+      const b = 99
+      `
+      const source = new CovSource(sourceRaw, 0)
+      source.lines[1].ignore.should.equal(true)
+      source.lines[2].ignore.should.equal(false)
+    })
+  })
 })

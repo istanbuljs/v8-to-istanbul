@@ -34,6 +34,39 @@ converter.applyCoverage([
 console.info(JSON.stringify(converter.toIstanbul()))
 ```
 
+## Ignoring Uncovered Lines
+
+Sometimes you might find yourself wanting to ignore uncovered lines
+in your application (for example, perhaps you run your tests in Linux, but
+there's code that only executes on Windows).
+
+To ignore lines, use the special comment `/* c8 ignore next */`.
+
+### ignoring the next line
+
+```js
+const myVariable = 99
+/* c8 ignore next */
+if (process.platform === 'win32') console.info('hello world')
+```
+
+### ignoring the next N lines
+
+```js
+const myVariable = 99
+/* c8 ignore next 3 */
+if (process.platform === 'win32') {
+  console.info('hello world')
+}
+```
+
+### ignoring the same line as the comment
+
+```js
+const myVariable = 99
+const os = process.platform === 'darwin' ? 'OSXy' /* c8 ignore next */ : 'Windowsy' 
+```
+
 ## Testing
 
 To execute tests, simply run:
