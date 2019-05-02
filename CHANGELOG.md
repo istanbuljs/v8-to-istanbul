@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [3.1.0](https://github.com/bcoe/v8-to-istanbul/compare/v3.0.1...v3.1.0) (2019-05-02)
+
+
+### Features
+
+* allow uncovered lines to be ignored with special comment ([#23](https://github.com/bcoe/v8-to-istanbul/issues/23)) ([f585cfa](https://github.com/bcoe/v8-to-istanbul/commit/f585cfa))
+
+
+
 ## [3.0.1](https://github.com/bcoe/v8-to-istanbul/compare/v3.0.0...v3.0.1) (2019-05-01)
 
 
