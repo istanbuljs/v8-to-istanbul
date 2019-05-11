@@ -29,7 +29,6 @@
     "c8": "^4.0.0",
     "coveralls": "^3.0.3",
     "should": "^13.2.3",
-    "source-map": "^0.7.3",
     "standard": "^12.0.1",
     "standard-version": "^5.0.2",
     "tap": "^13.1.2"
@@ -38,6 +37,7 @@
     "node": ">=10.10.0"
   },
   "dependencies": {
-    "convert-source-map": "^1.6.0"
+    "convert-source-map": "^1.6.0",
+    "source-map": "^0.7.3"
   }
 }
