@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0](https://github.com/bcoe/v8-to-istanbul/compare/v3.1.3...v3.2.0) (2019-06-23)
+
+
+### Build System
+
+* update testing matrix and deps ([#34](https://github.com/bcoe/v8-to-istanbul/issues/34)) ([204afca](https://github.com/bcoe/v8-to-istanbul/commit/204afca))
+
+
+### Features
+
+* add a sources option allowing to bypass fs operations ([#36](https://github.com/bcoe/v8-to-istanbul/issues/36)) ([4f5a681](https://github.com/bcoe/v8-to-istanbul/commit/4f5a681))
+* add TS typings ([#35](https://github.com/bcoe/v8-to-istanbul/issues/35)) ([5251108](https://github.com/bcoe/v8-to-istanbul/commit/5251108))
+* allow sourceMaps with sourceRoot ([#32](https://github.com/bcoe/v8-to-istanbul/issues/32)) ([8eb2ed0](https://github.com/bcoe/v8-to-istanbul/commit/8eb2ed0))
+
+
+
 ### [3.1.3](https://github.com/bcoe/v8-to-istanbul/compare/v3.1.2...v3.1.3) (2019-05-11)
 
 
