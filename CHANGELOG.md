@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.2.1](https://github.com/bcoe/v8-to-istanbul/compare/v3.2.0...v3.2.1) (2019-06-23)
+
+
+### Bug Fixes
+
+* logic for handling sourceRoot did not take into account process.cwd() ([#39](https://github.com/bcoe/v8-to-istanbul/issues/39)) ([6ed9524](https://github.com/bcoe/v8-to-istanbul/commit/6ed9524))
+
+
+
 ## [3.2.0](https://github.com/bcoe/v8-to-istanbul/compare/v3.1.3...v3.2.0) (2019-06-23)
 
 
