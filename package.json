@@ -5,6 +5,7 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
+    "fix": "standard --fix",
     "snapshot": "TAP_SNAPSHOT=1 tap test/*.js",
     "test": "c8 --reporter=html --reporter=text tap --no-coverage --no-esm test/*.js",
     "posttest": "standard",
