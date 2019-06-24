@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.2.3](https://github.com/bcoe/v8-to-istanbul/compare/v3.2.2...v3.2.3) (2019-06-24)
+
+
+### Bug Fixes
+
+* regex for detecting Node < 10.16 was off ([4ca7220](https://github.com/bcoe/v8-to-istanbul/commit/4ca7220))
+
+
+
 ### [3.2.2](https://github.com/bcoe/v8-to-istanbul/compare/v3.2.1...v3.2.2) (2019-06-24)
 
 
