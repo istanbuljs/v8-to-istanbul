@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.2.2](https://github.com/bcoe/v8-to-istanbul/compare/v3.2.1...v3.2.2) (2019-06-24)
+
+
+### Bug Fixes
+
+* Node >10.16.0 now uses new module wrap API ([7d7c9cb](https://github.com/bcoe/v8-to-istanbul/commit/7d7c9cb))
+
+
+
 ### [3.2.1](https://github.com/bcoe/v8-to-istanbul/compare/v3.2.0...v3.2.1) (2019-06-23)
 
 
