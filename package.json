@@ -33,7 +33,7 @@
     "source-map": "^0.7.3"
   },
   "devDependencies": {
-    "@types/node": "12.0.10",
+    "@types/node": "12.6.2",
     "c8": "5.0.1",
     "coveralls": "3.0.4",
     "should": "13.2.3",
