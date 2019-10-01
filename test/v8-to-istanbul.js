@@ -18,7 +18,7 @@ describe('V8ToIstanbul', () => {
         require.resolve('./fixtures/scripts/functions.js')
       )
       await v8ToIstanbul.load()
-      v8ToIstanbul.source.lines.length.should.equal(48)
+      v8ToIstanbul.preparedSourceMapSources[0].source.lines.length.should.equal(48)
       v8ToIstanbul.wrapperLength.should.equal(0) // common-js header.
     })
 
@@ -28,7 +28,7 @@ describe('V8ToIstanbul', () => {
         0
       )
       await v8ToIstanbul.load()
-      v8ToIstanbul.source.lines.length.should.equal(48)
+      v8ToIstanbul.preparedSourceMapSources[0].source.lines.length.should.equal(48)
       v8ToIstanbul.wrapperLength.should.equal(0) // ESM header.
     })
 
@@ -56,7 +56,7 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
       const v8ToIstanbul = new V8ToIstanbul(tmpPath)
       await v8ToIstanbul.load()
 
-      v8ToIstanbul.path.should.equal(absoluteSourceFilePath)
+      v8ToIstanbul.preparedSourceMapSources[0].path.should.equal(absoluteSourceFilePath)
     })
   })
 
@@ -91,6 +91,8 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
 
     const v8ToIstanbul = new V8ToIstanbul(tmpPath)
     await v8ToIstanbul.load()
+    v8ToIstanbul.preparedSourceMapSources[0].path.should.equal(absoluteSourceFilePath)
+    v8ToIstanbul.preparedSourceMapSources[1].path.should.equal(absoluteOtherSourceFilePath)
     v8ToIstanbul.scriptPath.should.equal(tmpPath)
   })
 
