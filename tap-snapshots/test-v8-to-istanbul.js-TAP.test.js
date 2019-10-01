@@ -2226,7 +2226,7 @@ Object {
       "name": "e",
     },
   },
-  "path": "./test/fixtures/scripts/branches.js",
+  "path": "test/fixtures/scripts/branches.js",
   "s": Object {
     "0": 0,
     "1": 1,
