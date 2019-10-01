@@ -60,6 +60,42 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
     })
   })
 
+  it('handle 1:many source-maps', async () => {
+      const sourceFileName = 'sourcemap-source.js'
+      const otherSourceFileName = 'sourcemap-other-source.js'
+      const sourceRoot = path.dirname(require.resolve(`./fixtures/scripts/${sourceFileName}`))
+      const absoluteSourceFilePath = path.join(sourceRoot, sourceFileName)
+      const absoluteOtherSourceFilePath = path.join(sourceRoot, otherSourceFileName)
+      const map = new sourcemap.SourceMapGenerator({
+        sourceRoot
+      })
+      map.addMapping({
+        source: sourceFileName,
+        original: { line: 1, column: 1 },
+        generated: { line: 1, column: 1 }
+      })
+      map.addMapping({
+        source: otherSourceFileName,
+        original: { line: 1, column: 1 },
+        generated: { line: 2, column: 1 }
+      })
+      map.setSourceContent(sourceFileName, readFileSync(absoluteSourceFilePath).toString())
+      map.setSourceContent(otherSourceFileName, readFileSync(absoluteOtherSourceFilePath).toString())
+      const base64Sourcemap = Buffer.from(map.toString()).toString('base64')
+      const source = `const foo = "bar";
+const baz = "foo";
+${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
+`
+      const tmpPath = path.join(os.tmpdir(), crypto.randomBytes(4).readUInt32LE(0) + '.js')
+      writeFileSync(tmpPath, source)
+
+      const v8ToIstanbul = new V8ToIstanbul(tmpPath)
+      await v8ToIstanbul.load()
+      v8ToIstanbul.scriptPath.should.equal(tmpPath)
+
+    })
+  })
+
   // execute JavaScript files in fixtures directory; these
   // files contain the raw v8 output along with a set of
   // assertions. the original scripts can be found in the
