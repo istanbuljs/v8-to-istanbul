@@ -33,13 +33,13 @@
     "source-map": "^0.7.3"
   },
   "devDependencies": {
-    "@types/node": "12.7.11",
-    "c8": "5.0.3",
+    "@types/node": "^12.7.11",
+    "c8": "^5.0.4",
     "coveralls": "3.0.6",
     "should": "13.2.3",
-    "standard": "12.0.1",
+    "standard": "^14.3.1",
     "standard-version": "7.0.0",
-    "tap": "14.6.1"
+    "tap": "^14.6.9"
   },
   "engines": {
     "node": ">=10.10.0"
