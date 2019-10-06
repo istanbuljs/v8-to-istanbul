@@ -11,7 +11,7 @@ const sourcemap = require('source-map')
 require('tap').mochaGlobals()
 require('should')
 
-describe('V8ToIstanbul', () => {
+describe('V8ToIstanbul', async () => {
   describe('constructor', () => {
     it('creates line instance for each line in V8ToIstanbul', async () => {
       const v8ToIstanbul = new V8ToIstanbul(
@@ -65,12 +65,12 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
   // assertions. the original scripts can be found in the
   // fixtures/scripts folder.
   const fixtureRoot = path.resolve(__dirname, './fixtures')
-  readdirSync(fixtureRoot).forEach(file => {
+  for (const file of readdirSync(fixtureRoot)) {
     const fixturePath = path.resolve(fixtureRoot, file)
     const stats = lstatSync(fixturePath)
     if (stats.isFile()) {
       const fixture = require(fixturePath)
-      runFixture(fixture)
+      await runFixture(fixture)
     }
-  })
+  }
 })
