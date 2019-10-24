@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.2.6](https://github.com/bcoe/v8-to-istanbul/compare/v3.2.5...v3.2.6) (2019-10-24)
+
+
+### Bug Fixes
+
+* remove scheme from paths before joining ([#69](https://github.com/bcoe/v8-to-istanbul/issues/69)) ([10612fa](https://github.com/bcoe/v8-to-istanbul/commit/10612fa))
+
+### [3.2.5](https://github.com/bcoe/v8-to-istanbul/compare/v3.2.4...v3.2.5) (2019-10-07)
+
+
+### Bug Fixes
+
+* fs.promises was not introduced until 10 ([#67](https://github.com/bcoe/v8-to-istanbul/issues/67)) ([cdcc225](https://github.com/bcoe/v8-to-istanbul/commit/cdcc225))
+
+### [3.2.4](https://github.com/bcoe/v8-to-istanbul/compare/v3.2.3...v3.2.4) (2019-10-06)
+
 ### [3.2.3](https://github.com/bcoe/v8-to-istanbul/compare/v3.2.2...v3.2.3) (2019-06-24)
 
 
