@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.2.6](https://github.com/bcoe/v8-to-istanbul/compare/v3.2.5...v3.2.6) (2019-10-24)
+
+
+### Bug Fixes
+
+* remove scheme from paths before joining ([#69](https://github.com/bcoe/v8-to-istanbul/issues/69)) ([10612fa](https://github.com/bcoe/v8-to-istanbul/commit/10612fa))
+
 ### [3.2.5](https://github.com/bcoe/v8-to-istanbul/compare/v3.2.4...v3.2.5) (2019-10-07)
 
 
