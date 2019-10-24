@@ -14,10 +14,11 @@ module.exports = async (fixture) => {
   let coverageIstanbul = script.toIstanbul()
   // the top level object is keyed on filename, grab the inner
   // object which is easier to assert against.
-  coverageIstanbul = coverageIstanbul[Object.keys(coverageIstanbul)[0]]
+  let path = Object.keys(coverageIstanbul)[0]
+  coverageIstanbul = coverageIstanbul[path]
 
   describe(fixture.describe, () => {
-    it('matches snapshot', () => {
+    it('matches snapshot: ', () => {
       t.matchSnapshot(coverageIstanbul)
     })
   })
