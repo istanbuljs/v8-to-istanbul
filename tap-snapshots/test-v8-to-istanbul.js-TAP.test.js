@@ -272,7 +272,6 @@ Object {
       "name": "e",
     },
   },
-  "path": "./test/fixtures/scripts/branches.js",
   "s": Object {
     "0": 1,
     "1": 1,
@@ -1067,7 +1066,6 @@ Object {
       "name": "hello",
     },
   },
-  "path": "./test/fixtures/scripts/functions.js",
   "s": Object {
     "0": 1,
     "1": 1,
@@ -1669,7 +1667,6 @@ Object {
   },
   "f": Object {},
   "fnMap": Object {},
-  "path": "./test/fixtures/scripts/mixed-newlines.js",
   "s": Object {
     "0": 1,
     "1": 1,
@@ -1776,7 +1773,6 @@ Object {
   },
   "f": Object {},
   "fnMap": Object {},
-  "path": "./test/fixtures/scripts/shebang.js",
   "s": Object {
     "0": 1,
     "1": 1,
@@ -2226,7 +2222,6 @@ Object {
       "name": "e",
     },
   },
-  "path": "test/fixtures/scripts/branches.js",
   "s": Object {
     "0": 0,
     "1": 1,
