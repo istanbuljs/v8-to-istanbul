@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v3.2.6...v4.0.0) (2019-11-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* paths are now consistently absolute.
+
+### Features
+
+* adds special (empty-report) block ([#74](https://www.github.com/istanbuljs/v8-to-istanbul/issues/74)) ([e981cc1](https://www.github.com/istanbuljs/v8-to-istanbul/commit/e981cc156b447ce7a936114dafac591126fd65dd))
+
+
+### Bug Fixes
+
+* consistently resolve paths to absolute form ([#72](https://www.github.com/istanbuljs/v8-to-istanbul/issues/72)) ([55f4116](https://www.github.com/istanbuljs/v8-to-istanbul/commit/55f411624841f89f8309dc460387f8dd15c8b8f4))
+
 ### [3.2.6](https://github.com/bcoe/v8-to-istanbul/compare/v3.2.5...v3.2.6) (2019-10-24)
 
 
