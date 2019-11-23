@@ -37,7 +37,6 @@
     "coveralls": "3.0.8",
     "should": "13.2.3",
     "standard": "^14.3.1",
-    "standard-version": "7.0.0",
     "tap": "^14.9.2"
   },
   "engines": {
