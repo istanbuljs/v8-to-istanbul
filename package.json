@@ -35,9 +35,9 @@
     "@types/node": "^12.7.11",
     "c8": "^6.0.1",
     "coveralls": "3.0.8",
+    "nyc": "^14.1.1",
     "should": "13.2.3",
     "standard": "^14.3.1",
-    "standard-version": "7.0.0",
     "tap": "^14.9.2"
   },
   "engines": {
