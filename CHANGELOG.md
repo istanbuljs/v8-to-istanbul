@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.1](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v4.0.0...v4.0.1) (2019-12-12)
+
+
+### Bug Fixes
+
+* loosen engine requirement so it can be installed on node 8 ([#82](https://www.github.com/istanbuljs/v8-to-istanbul/issues/82)) ([18f2587](https://www.github.com/istanbuljs/v8-to-istanbul/commit/18f2587481617e4db5ae1565c4f7052a8314af92))
+
 ## [4.0.0](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v3.2.6...v4.0.0) (2019-11-23)
 
 
