@@ -58,6 +58,37 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
 
       v8ToIstanbul.path.should.equal(absoluteSourceFilePath)
     })
+
+    it('handles sourceContent', async () => {
+      const sourceFileName = 'sourcemap-source.js'
+      const sourceRoot = path.dirname(require.resolve(`./fixtures/scripts/${sourceFileName}`))
+      const absoluteSourceFilePath = path.join(sourceRoot, sourceFileName)
+      const map = new sourcemap.SourceMapGenerator({
+        file: sourceFileName
+      })
+      map.addMapping({
+        original: { line: 1, column: 1 },
+        generated: { line: 1, column: 1 },
+        source: sourceFileName
+      })
+      map.setSourceContent(sourceFileName, readFileSync(absoluteSourceFilePath).toString())
+
+      const source = 'const foo = "bar";'
+      const tmpPath = path.join(os.tmpdir(), crypto.randomBytes(4).readUInt32LE(0) + '.js')
+      writeFileSync(tmpPath, source)
+
+      const sources = {
+        sourceMap: {
+          sourcemap: map.toJSON()
+        }
+      }
+      const v8ToIstanbul = new V8ToIstanbul(tmpPath, undefined, sources)
+      await v8ToIstanbul.load()
+
+      // if the source is transpiled and since we didn't inline the source map into the transpiled source file
+      // that means it was bale to access the content via the provided sources object
+      v8ToIstanbul.sourceTranspiled.should.not.be.undefined()
+    })
   })
 
   // execute JavaScript files in fixtures directory; these
