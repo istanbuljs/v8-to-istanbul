@@ -11,10 +11,7 @@
     "posttest": "standard",
     "coverage": "c8 report --reporter=text-lcov | coveralls"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:istanbuljs/v8-to-istanbul.git"
-  },
+  "repository": "istanbuljs/v8-to-istanbul",
   "keywords": [
     "istanbul",
     "v8",
