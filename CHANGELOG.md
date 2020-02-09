@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.1.2](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v4.1.1...v4.1.2) (2020-02-09)
+
+
+### Bug Fixes
+
+* protect against undefined sourcesContent ([#89](https://www.github.com/istanbuljs/v8-to-istanbul/issues/89)) ([5b94fe3](https://www.github.com/istanbuljs/v8-to-istanbul/commit/5b94fe37f9b86686386ad01f1fb8a42182f35ad8))
+
 ### [4.1.1](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v4.1.0...v4.1.1) (2020-02-07)
 
 
