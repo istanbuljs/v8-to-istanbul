@@ -18,7 +18,7 @@ describe('V8ToIstanbul', async () => {
         require.resolve('./fixtures/scripts/functions.js')
       )
       await v8ToIstanbul.load()
-      v8ToIstanbul.source.lines.length.should.equal(48)
+      v8ToIstanbul.files[v8ToIstanbul.path].source.lines.length.should.equal(48)
       v8ToIstanbul.wrapperLength.should.equal(0) // common-js header.
     })
 
@@ -28,7 +28,7 @@ describe('V8ToIstanbul', async () => {
         0
       )
       await v8ToIstanbul.load()
-      v8ToIstanbul.source.lines.length.should.equal(48)
+      v8ToIstanbul.files[v8ToIstanbul.path].lines.length.should.equal(48)
       v8ToIstanbul.wrapperLength.should.equal(0) // ESM header.
     })
 
