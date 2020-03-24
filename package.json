@@ -20,7 +20,8 @@
   "standard": {
     "ignore": [
       "**/test/fixtures"
-    ]
+    ],
+    "globals": [ "beforeEach", "afterEach", "describe", "it" ]
   },
   "author": "Ben Coe <ben@npmjs.com>",
   "license": "ISC",

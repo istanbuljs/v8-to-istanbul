@@ -1,5 +1,3 @@
-/* global describe, it */
-
 const toIstanbul = require('../../')
 const t = require('tap')
 
