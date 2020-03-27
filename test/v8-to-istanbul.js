@@ -1,5 +1,4 @@
-/* global describe, it */
-
+/* global describe, it, beforeEach, afterEach */
 const { readdirSync, lstatSync, writeFileSync, readFileSync } = require('fs')
 const path = require('path')
 const runFixture = require('./utils/run-fixture')
@@ -88,6 +87,23 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
       // if the source is transpiled and since we didn't inline the source map into the transpiled source file
       // that means it was bale to access the content via the provided sources object
       v8ToIstanbul.sourceTranspiled.should.not.be.undefined()
+    })
+  })
+  describe('source map format edge cases', () => {
+    let consoleWarn
+    beforeEach(() => {
+      consoleWarn = console.warn
+      console.warn = () => { throw new Error('Test should not invoke console.warn') }
+    })
+    afterEach(() => {
+      console.warn = consoleWarn
+    })
+    it('should handle empty sources in a sourcemap', async () => {
+      const v8ToIstanbul = new V8ToIstanbul(
+        `file://${require.resolve('./fixtures/scripts/empty.compiled.js')}`,
+        0
+      )
+      await v8ToIstanbul.load()
     })
   })
 
