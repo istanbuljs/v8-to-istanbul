@@ -1,0 +1,3 @@
+test/fixtures/scripts/needs-compile.js eol=crlf
+test/fixtures/scripts/needs-compile.compiled.js eol=crlf
+test/fixtures/scripts/needs-compile.compiled.js.map eol=crlf
