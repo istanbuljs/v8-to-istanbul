@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.1.3](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v4.1.2...v4.1.3) (2020-03-27)
+
+
+### Bug Fixes
+
+* handle sourcemap `sources` emtpy edge case ([#94](https://www.github.com/istanbuljs/v8-to-istanbul/issues/94)) ([628af48](https://www.github.com/istanbuljs/v8-to-istanbul/commit/628af48e2f7ab279c52f4355c0ccb92ac16b2c1a))
+* v8 coverage ranges that fall on \n characters cause exceptions ([#96](https://www.github.com/istanbuljs/v8-to-istanbul/issues/96)) ([c5731a3](https://www.github.com/istanbuljs/v8-to-istanbul/commit/c5731a3b2fe4dccfae9ee581a5bf7a6e362f5cb8))
+
 ### [4.1.2](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v4.1.1...v4.1.2) (2020-02-09)
 
 
