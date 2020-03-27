@@ -6,6 +6,7 @@ const V8ToIstanbul = require('../lib/v8-to-istanbul')
 const crypto = require('crypto')
 const os = require('os')
 const sourcemap = require('source-map')
+const assert = require('assert')
 
 require('tap').mochaGlobals()
 require('should')
@@ -87,6 +88,36 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
       // if the source is transpiled and since we didn't inline the source map into the transpiled source file
       // that means it was bale to access the content via the provided sources object
       v8ToIstanbul.sourceTranspiled.should.not.be.undefined()
+    })
+
+    it('should clamp line source column >= 0', async () => {
+      const v8ToIstanbul = new V8ToIstanbul(
+        `file://${require.resolve('./fixtures/scripts/needs-compile.compiled.js')}`,
+        0
+      )
+
+      // read the file and find the first end of line char
+      const fileBody = readFileSync(require.resolve('./fixtures/scripts/needs-compile.compiled.js')).toString()
+      const matchedNewLineChar = fileBody.match(/(?<=\r?\n)/u).index
+
+      // this isn't an assertion for the test so much as it is an assertion that the
+      // test fixture hasn't be reverted from \r\n to \n.
+      assert(fileBody.substring(matchedNewLineChar - 2, matchedNewLineChar) === '\r\n', 'The test fixture is misconfigured!')
+
+      await v8ToIstanbul.load()
+      // apply a fake range that starts with the matched new line
+      // (these ranges can occur on v8 running on windows) and verify
+      // coverage is applied correctly. CovLine will have a
+      // gap between the endCol of the previous line ending on \r and startCol of the
+      // next line. This would cause -1 to be sent for the source map lookup.
+      // This would cause source map translation to throw
+      v8ToIstanbul.applyCoverage([{
+        functionName: 'fake',
+        ranges: [{
+          startOffset: matchedNewLineChar - 1,
+          endOffset: matchedNewLineChar + 10
+        }]
+      }])
     })
   })
   describe('source map format edge cases', () => {
