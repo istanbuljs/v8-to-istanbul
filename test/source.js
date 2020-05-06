@@ -32,6 +32,12 @@ describe('Source', () => {
       source.relativeToOffset(2, 50).should.equal(22)
       source.relativeToOffset(1, Infinity).should.equal(1)
     })
+
+    it('returns empty object for out of range params', () => {
+      const sourceRaw = ''
+      const source = new CovSource(sourceRaw, 0)
+      source.offsetToOriginalRelative(undefined, Infinity, Infinity).should.deepEqual({})
+    })
   })
 
   describe('ignore', () => {

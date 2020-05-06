@@ -136,6 +136,15 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
       )
       await v8ToIstanbul.load()
     })
+
+    it('should handle relative sourceRoots correctly', async () => {
+      const v8ToIstanbul = new V8ToIstanbul(
+        `file://${require.resolve('./fixtures/scripts/relative-source-root.compiled.js')}`,
+        0
+      )
+      await v8ToIstanbul.load()
+      assert(v8ToIstanbul.path.includes('v8-to-istanbul/test/fixtures/one-up/relative-source-root.js'))
+    })
   })
 
   // execute JavaScript files in fixtures directory; these
