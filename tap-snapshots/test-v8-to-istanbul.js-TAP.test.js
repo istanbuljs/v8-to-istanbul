@@ -5,7 +5,7 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
-exports[`test/v8-to-istanbul.js TAP > must match snapshot 1`] = `
+exports['test/v8-to-istanbul.js TAP > must match snapshot 1'] = `
 Object {
   "b": Object {
     "0": Array [
@@ -620,7 +620,7 @@ Object {
 }
 `
 
-exports[`test/v8-to-istanbul.js TAP > must match snapshot 2`] = `
+exports['test/v8-to-istanbul.js TAP > must match snapshot 2'] = `
 Object {
   "b": Object {
     "0": Array [
@@ -1601,7 +1601,7 @@ Object {
 }
 `
 
-exports[`test/v8-to-istanbul.js TAP > must match snapshot 3`] = `
+exports['test/v8-to-istanbul.js TAP > must match snapshot 3'] = `
 Object {
   "b": Object {
     "0": Array [
@@ -1707,7 +1707,7 @@ Object {
 }
 `
 
-exports[`test/v8-to-istanbul.js TAP > must match snapshot 4`] = `
+exports['test/v8-to-istanbul.js TAP > must match snapshot 4'] = `
 Object {
   "b": Object {
     "0": Array [
@@ -1868,7 +1868,7 @@ Object {
 }
 `
 
-exports[`test/v8-to-istanbul.js TAP > must match snapshot 5`] = `
+exports['test/v8-to-istanbul.js TAP > must match snapshot 5'] = `
 Object {
   "b": Object {},
   "branchMap": Object {},
