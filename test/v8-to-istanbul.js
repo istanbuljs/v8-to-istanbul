@@ -140,7 +140,7 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
       Object.keys(v8ToIstanbul.toIstanbul()).should.eql(['webpack:///src/index.ts', 'webpack:///src/utils.ts'])
     })
   })
-  
+
   describe('source map format edge cases', () => {
     let consoleWarn
     beforeEach(() => {
