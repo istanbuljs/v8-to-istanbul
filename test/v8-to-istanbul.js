@@ -147,6 +147,28 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
       await v8ToIstanbul.load()
       assert(v8ToIstanbul.path.includes('v8-to-istanbul/test/fixtures/one-up/relative-source-root.js'))
     })
+
+    it('should handles source maps with moultiple sources', async () => {
+      const v8ToIstanbul = new V8ToIstanbul(
+        `file://${require.resolve('./fixtures/scripts/sourcemap-multisource.js')}`,
+        0
+      )
+      await v8ToIstanbul.load()
+
+      v8ToIstanbul.covSources.length.should.equal(3)
+      Object.keys(v8ToIstanbul.toIstanbul()).should.eql(['webpack:///webpack/bootstrap', 'webpack:///src/index.ts', 'webpack:///src/utils.ts'])
+    })
+  })
+
+  it('should exclude files when passing', async () => {
+    const v8ToIstanbul = new V8ToIstanbul(
+      `file://${require.resolve('./fixtures/scripts/sourcemap-multisource.js')}`,
+      0,
+      undefined,
+      path => path.indexOf('bootstrap') > -1
+    )
+    await v8ToIstanbul.load()
+    Object.keys(v8ToIstanbul.toIstanbul()).should.eql(['webpack:///src/index.ts', 'webpack:///src/utils.ts'])
   })
 
   // execute JavaScript files in fixtures directory; these

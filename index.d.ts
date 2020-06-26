@@ -19,6 +19,6 @@ declare class V8ToIstanbul {
   toIstanbul(): CoverageMapData
 }
 
-declare function v8ToIstanbul(scriptPath: string, wrapperLength?: number, sources?: Sources): V8ToIstanbul
+declare function v8ToIstanbul(scriptPath: string, wrapperLength?: number, sources?: Sources, excludePath?: (path) => boolean): V8ToIstanbul
 
 export = v8ToIstanbul
