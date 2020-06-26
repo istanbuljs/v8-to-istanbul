@@ -121,7 +121,26 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
         }]
       }])
     })
+
+    it('should exclude files when passing excludePath', async () => {
+      const v8ToIstanbul = new V8ToIstanbul(
+        `file://${require.resolve('./fixtures/scripts/sourcemap-multisource.js')}`,
+        0,
+        undefined,
+        path => path.indexOf('bootstrap') > -1
+      )
+      await v8ToIstanbul.load()
+      v8ToIstanbul.applyCoverage([{
+        functionName: 'fake',
+        ranges: [{
+          startOffset: 0,
+          endOffset: 1
+        }]
+      }])
+      Object.keys(v8ToIstanbul.toIstanbul()).should.eql(['webpack:///src/index.ts', 'webpack:///src/utils.ts'])
+    })
   })
+  
   describe('source map format edge cases', () => {
     let consoleWarn
     beforeEach(() => {
@@ -158,17 +177,6 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
       v8ToIstanbul.covSources.length.should.equal(3)
       Object.keys(v8ToIstanbul.toIstanbul()).should.eql(['webpack:///webpack/bootstrap', 'webpack:///src/index.ts', 'webpack:///src/utils.ts'])
     })
-  })
-
-  it('should exclude files when passing', async () => {
-    const v8ToIstanbul = new V8ToIstanbul(
-      `file://${require.resolve('./fixtures/scripts/sourcemap-multisource.js')}`,
-      0,
-      undefined,
-      path => path.indexOf('bootstrap') > -1
-    )
-    await v8ToIstanbul.load()
-    Object.keys(v8ToIstanbul.toIstanbul()).should.eql(['webpack:///src/index.ts', 'webpack:///src/utils.ts'])
   })
 
   // execute JavaScript files in fixtures directory; these
