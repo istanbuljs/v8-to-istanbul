@@ -5,7 +5,7 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
-exports['test/v8-to-istanbul.js TAP > must match snapshot 1'] = `
+exports[`test/v8-to-istanbul.js TAP > must match branches snapshot 1`] = `
 Object {
   "b": Object {
     "0": Array [
@@ -620,7 +620,7 @@ Object {
 }
 `
 
-exports['test/v8-to-istanbul.js TAP > must match snapshot 2'] = `
+exports[`test/v8-to-istanbul.js TAP > must match functions snapshot 1`] = `
 Object {
   "b": Object {
     "0": Array [
@@ -1601,7 +1601,7 @@ Object {
 }
 `
 
-exports['test/v8-to-istanbul.js TAP > must match snapshot 3'] = `
+exports[`test/v8-to-istanbul.js TAP > must match mixed new lines snapshot 1`] = `
 Object {
   "b": Object {
     "0": Array [
@@ -1707,7 +1707,7 @@ Object {
 }
 `
 
-exports['test/v8-to-istanbul.js TAP > must match snapshot 4'] = `
+exports[`test/v8-to-istanbul.js TAP > must match shebang snapshot 1`] = `
 Object {
   "b": Object {
     "0": Array [
@@ -1868,12 +1868,360 @@ Object {
 }
 `
 
-exports['test/v8-to-istanbul.js TAP > must match snapshot 5'] = `
+exports[`test/v8-to-istanbul.js TAP > must match source-map and minified source snapshot 1`] = `
 Object {
-  "b": Object {},
-  "branchMap": Object {},
-  "f": Object {},
-  "fnMap": Object {},
+  "b": Object {
+    "0": Array [
+      1,
+    ],
+    "1": Array [
+      0,
+    ],
+    "10": Array [
+      0,
+    ],
+    "2": Array [
+      0,
+    ],
+    "3": Array [
+      0,
+    ],
+    "4": Array [
+      0,
+    ],
+    "5": Array [
+      0,
+    ],
+    "6": Array [
+      1,
+    ],
+    "7": Array [
+      0,
+    ],
+    "8": Array [
+      0,
+    ],
+    "9": Array [
+      1,
+    ],
+  },
+  "branchMap": Object {
+    "0": Object {
+      "line": 31,
+      "loc": Object {
+        "end": Object {
+          "column": 10,
+          "line": 31,
+        },
+        "start": Object {
+          "column": 10,
+          "line": 31,
+        },
+      },
+      "locations": Array [
+        Object {
+          "end": Object {
+            "column": 10,
+            "line": 31,
+          },
+          "start": Object {
+            "column": 10,
+            "line": 31,
+          },
+        },
+      ],
+      "type": "branch",
+    },
+    "1": Object {
+      "line": 5,
+      "loc": Object {
+        "end": Object {
+          "column": 18,
+          "line": 5,
+        },
+        "start": Object {
+          "column": 7,
+          "line": 5,
+        },
+      },
+      "locations": Array [
+        Object {
+          "end": Object {
+            "column": 18,
+            "line": 5,
+          },
+          "start": Object {
+            "column": 7,
+            "line": 5,
+          },
+        },
+      ],
+      "type": "branch",
+    },
+    "10": Object {
+      "line": 29,
+      "loc": Object {
+        "end": Object {
+          "column": 10,
+          "line": 30,
+        },
+        "start": Object {
+          "column": 0,
+          "line": 29,
+        },
+      },
+      "locations": Array [
+        Object {
+          "end": Object {
+            "column": 10,
+            "line": 30,
+          },
+          "start": Object {
+            "column": 0,
+            "line": 29,
+          },
+        },
+      ],
+      "type": "branch",
+    },
+    "2": Object {
+      "line": 8,
+      "loc": Object {
+        "end": Object {
+          "column": 11,
+          "line": 8,
+        },
+        "start": Object {
+          "column": 0,
+          "line": 8,
+        },
+      },
+      "locations": Array [
+        Object {
+          "end": Object {
+            "column": 11,
+            "line": 8,
+          },
+          "start": Object {
+            "column": 0,
+            "line": 8,
+          },
+        },
+      ],
+      "type": "branch",
+    },
+    "3": Object {
+      "line": 11,
+      "loc": Object {
+        "end": Object {
+          "column": 12,
+          "line": 12,
+        },
+        "start": Object {
+          "column": 11,
+          "line": 11,
+        },
+      },
+      "locations": Array [
+        Object {
+          "end": Object {
+            "column": 12,
+            "line": 12,
+          },
+          "start": Object {
+            "column": 11,
+            "line": 11,
+          },
+        },
+      ],
+      "type": "branch",
+    },
+    "4": Object {
+      "line": 14,
+      "loc": Object {
+        "end": Object {
+          "column": 28,
+          "line": 18,
+        },
+        "start": Object {
+          "column": 7,
+          "line": 14,
+        },
+      },
+      "locations": Array [
+        Object {
+          "end": Object {
+            "column": 28,
+            "line": 18,
+          },
+          "start": Object {
+            "column": 7,
+            "line": 14,
+          },
+        },
+      ],
+      "type": "branch",
+    },
+    "5": Object {
+      "line": 31,
+      "loc": Object {
+        "end": Object {
+          "column": 10,
+          "line": 31,
+        },
+        "start": Object {
+          "column": 10,
+          "line": 31,
+        },
+      },
+      "locations": Array [
+        Object {
+          "end": Object {
+            "column": 10,
+            "line": 31,
+          },
+          "start": Object {
+            "column": 10,
+            "line": 31,
+          },
+        },
+      ],
+      "type": "branch",
+    },
+    "6": Object {
+      "line": 1,
+      "loc": Object {
+        "end": Object {
+          "column": 16,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 0,
+          "line": 1,
+        },
+      },
+      "locations": Array [
+        Object {
+          "end": Object {
+            "column": 16,
+            "line": 2,
+          },
+          "start": Object {
+            "column": 0,
+            "line": 1,
+          },
+        },
+      ],
+      "type": "branch",
+    },
+    "7": Object {
+      "line": 1,
+      "loc": Object {
+        "end": Object {
+          "column": 6,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 0,
+          "line": 1,
+        },
+      },
+      "locations": Array [
+        Object {
+          "end": Object {
+            "column": 6,
+            "line": 2,
+          },
+          "start": Object {
+            "column": 0,
+            "line": 1,
+          },
+        },
+      ],
+      "type": "branch",
+    },
+    "8": Object {
+      "line": 2,
+      "loc": Object {
+        "end": Object {
+          "column": 10,
+          "line": 2,
+        },
+        "start": Object {
+          "column": 0,
+          "line": 2,
+        },
+      },
+      "locations": Array [
+        Object {
+          "end": Object {
+            "column": 10,
+            "line": 2,
+          },
+          "start": Object {
+            "column": 0,
+            "line": 2,
+          },
+        },
+      ],
+      "type": "branch",
+    },
+    "9": Object {
+      "line": 20,
+      "loc": Object {
+        "end": Object {
+          "column": 10,
+          "line": 30,
+        },
+        "start": Object {
+          "column": 12,
+          "line": 20,
+        },
+      },
+      "locations": Array [
+        Object {
+          "end": Object {
+            "column": 10,
+            "line": 30,
+          },
+          "start": Object {
+            "column": 12,
+            "line": 20,
+          },
+        },
+      ],
+      "type": "branch",
+    },
+  },
+  "f": Object {
+    "0": 1,
+  },
+  "fnMap": Object {
+    "0": Object {
+      "decl": Object {
+        "end": Object {
+          "column": 10,
+          "line": 30,
+        },
+        "start": Object {
+          "column": 12,
+          "line": 20,
+        },
+      },
+      "line": 20,
+      "loc": Object {
+        "end": Object {
+          "column": 10,
+          "line": 30,
+        },
+        "start": Object {
+          "column": 12,
+          "line": 20,
+        },
+      },
+      "name": "e",
+    },
+  },
   "s": Object {
     "0": 0,
     "1": 1,
