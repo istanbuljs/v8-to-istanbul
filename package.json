@@ -9,7 +9,7 @@
     "snapshot": "TAP_SNAPSHOT=1 tap test/*.js",
     "test": "c8 --reporter=html --reporter=text tap --no-coverage --no-esm test/*.js",
     "posttest": "standard",
-    "coverage": "c8 report --reporter=text-lcov | coveralls"
+    "coverage": "c8 report --check-coverage"
   },
   "repository": "istanbuljs/v8-to-istanbul",
   "keywords": [
@@ -32,7 +32,6 @@
   "devDependencies": {
     "@types/node": "^12.7.11",
     "c8": "^7.0.0",
-    "coveralls": "3.1.0",
     "should": "13.2.3",
     "standard": "^14.3.1",
     "tap": "^14.9.2"
