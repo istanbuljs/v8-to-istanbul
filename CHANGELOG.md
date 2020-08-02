@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v4.1.4...v5.0.0) (2020-08-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop Node 8 support (#110)
+* source map files with multiple sources will now be  parsed differently than  source map files with a single source.
+
+### Features
+
+* support source map with multiple sources ([#102](https://www.github.com/istanbuljs/v8-to-istanbul/issues/102)) ([d1f435c](https://www.github.com/istanbuljs/v8-to-istanbul/commit/d1f435cf183c510188ec5e43781d5bc10989a4e0)), closes [#21](https://www.github.com/istanbuljs/v8-to-istanbul/issues/21)
+
+
+### Bug Fixes
+
+* address path related bugs with 1:many source maps ([#108](https://www.github.com/istanbuljs/v8-to-istanbul/issues/108)) ([9a618bc](https://www.github.com/istanbuljs/v8-to-istanbul/commit/9a618bc374ef6e2205c26c5ebf728bc69f4a9288))
+
+
+### Build System
+
+* drop Node 8 support ([#110](https://www.github.com/istanbuljs/v8-to-istanbul/issues/110)) ([c8bf7a1](https://www.github.com/istanbuljs/v8-to-istanbul/commit/c8bf7a1bdcf8b911943bb1ffc97e401d979aa11f))
+
 ### [4.1.4](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v4.1.3...v4.1.4) (2020-05-06)
 
 
