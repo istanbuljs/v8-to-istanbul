@@ -137,7 +137,7 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
           endOffset: 1
         }]
       }])
-      Object.keys(v8ToIstanbul.toIstanbul()).should.eql(['webpack:///src/index.ts', 'webpack:///src/utils.ts'])
+      Object.keys(v8ToIstanbul.toIstanbul()).should.eql(['/src/index.ts', '/src/utils.ts'])
     })
   })
 
@@ -175,7 +175,7 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
       await v8ToIstanbul.load()
 
       v8ToIstanbul.covSources.length.should.equal(3)
-      Object.keys(v8ToIstanbul.toIstanbul()).should.eql(['webpack:///webpack/bootstrap', 'webpack:///src/index.ts', 'webpack:///src/utils.ts'])
+      Object.keys(v8ToIstanbul.toIstanbul()).should.eql(['/webpack/bootstrap', '/src/index.ts', '/src/utils.ts'])
     })
   })
 
