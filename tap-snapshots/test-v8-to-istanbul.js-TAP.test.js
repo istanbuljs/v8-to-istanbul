@@ -5,7 +5,7 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
-exports[`test/v8-to-istanbul.js TAP > must match branches snapshot 1`] = `
+exports['test/v8-to-istanbul.js TAP > must match branches snapshot 1'] = `
 Object {
   "b": Object {
     "0": Array [
@@ -620,7 +620,7 @@ Object {
 }
 `
 
-exports[`test/v8-to-istanbul.js TAP > must match functions snapshot 1`] = `
+exports['test/v8-to-istanbul.js TAP > must match functions snapshot 1'] = `
 Object {
   "b": Object {
     "0": Array [
@@ -1601,7 +1601,7 @@ Object {
 }
 `
 
-exports[`test/v8-to-istanbul.js TAP > must match mixed new lines snapshot 1`] = `
+exports['test/v8-to-istanbul.js TAP > must match mixed new lines snapshot 1'] = `
 Object {
   "b": Object {
     "0": Array [
@@ -1707,7 +1707,7 @@ Object {
 }
 `
 
-exports[`test/v8-to-istanbul.js TAP > must match shebang snapshot 1`] = `
+exports['test/v8-to-istanbul.js TAP > must match shebang snapshot 1'] = `
 Object {
   "b": Object {
     "0": Array [
@@ -1868,7 +1868,7 @@ Object {
 }
 `
 
-exports[`test/v8-to-istanbul.js TAP > must match source-map and minified source snapshot 1`] = `
+exports['test/v8-to-istanbul.js TAP > must match source-map and minified source snapshot 1'] = `
 Object {
   "b": Object {
     "0": Array [
@@ -2570,7 +2570,7 @@ Object {
 }
 `
 
-exports[`test/v8-to-istanbul.js TAP > must match source-map with multiple source files snapshot 1`] = `
+exports['test/v8-to-istanbul.js TAP > must match source-map with multiple source files snapshot 1'] = `
 Object {
   "b": Object {},
   "branchMap": Object {},
