@@ -1,5 +1,5 @@
 module.exports = {
-  describe: 'functions',
+  describe: 'mixed new lines',
   coverageV8: {
     "scriptId": "71",
     "url": "./test/fixtures/scripts/mixed-newlines.js",
