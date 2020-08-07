@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.0.1](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v5.0.0...v5.0.1) (2020-08-07)
+
+
+### Bug Fixes
+
+* add missing type in TS definition ([#113](https://www.github.com/istanbuljs/v8-to-istanbul/issues/113)) ([a14ebc2](https://www.github.com/istanbuljs/v8-to-istanbul/commit/a14ebc2f3c71cb854dacb06490ea3e0f9bc17dbd))
+
 ## [5.0.0](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v4.1.4...v5.0.0) (2020-08-02)
 
 
