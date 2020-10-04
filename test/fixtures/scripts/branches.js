@@ -29,3 +29,10 @@ e()
 // binary operation that spans multiple lines.
 const g = 99 &&
   33 || 13
+
+function fn() {
+  return true;
+  /* c8 ignore next */
+  console.log('never runs');
+}
+fn()
