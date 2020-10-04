@@ -9,43 +9,32 @@ module.exports = {
         "ranges": [
           {
             "startOffset": 0,
-            "endOffset": 520,
-            "count": 1
-          }
-        ],
-        "isBlockCoverage": true
-      },
-      {
-        "functionName": "",
-        "ranges": [
-          {
-            "startOffset": 1,
-            "endOffset": 518,
+            "endOffset": 545,
             "count": 1
           },
           {
-            "startOffset": 102,
-            "endOffset": 107,
+            "startOffset": 40,
+            "endOffset": 45,
             "count": 0
           },
           {
-            "startOffset": 159,
-            "endOffset": 166,
+            "startOffset": 95,
+            "endOffset": 104,
             "count": 0
           },
           {
-            "startOffset": 225,
-            "endOffset": 230,
+            "startOffset": 163,
+            "endOffset": 168,
             "count": 0
           },
           {
-            "startOffset": 260,
-            "endOffset": 278,
+            "startOffset": 198,
+            "endOffset": 216,
             "count": 0
           },
           {
-            "startOffset": 510,
-            "endOffset": 515,
+            "startOffset": 448,
+            "endOffset": 453,
             "count": 0
           }
         ],
@@ -62,6 +51,22 @@ module.exports = {
           {
             "startOffset": 411,
             "endOffset": 433,
+            "count": 0
+          }
+        ],
+        "isBlockCoverage": true
+      },
+      {
+        "functionName": "fn",
+        "ranges": [
+          {
+            "startOffset": 455,
+            "endOffset": 539,
+            "count": 1
+          },
+          {
+            "startOffset": 485,
+            "endOffset": 538,
             "count": 0
           }
         ],
