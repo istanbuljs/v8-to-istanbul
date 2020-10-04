@@ -2038,26 +2038,26 @@ Object {
   },
   "branchMap": Object {
     "0": Object {
-      "line": 38,
+      "line": 31,
       "loc": Object {
         "end": Object {
-          "column": 4,
-          "line": 38,
+          "column": 10,
+          "line": 31,
         },
         "start": Object {
-          "column": 4,
-          "line": 38,
+          "column": 10,
+          "line": 31,
         },
       },
       "locations": Array [
         Object {
           "end": Object {
-            "column": 4,
-            "line": 38,
+            "column": 10,
+            "line": 31,
           },
           "start": Object {
-            "column": 4,
-            "line": 38,
+            "column": 10,
+            "line": 31,
           },
         },
       ],
@@ -2194,26 +2194,26 @@ Object {
       "type": "branch",
     },
     "5": Object {
-      "line": 38,
+      "line": 31,
       "loc": Object {
         "end": Object {
-          "column": 4,
-          "line": 38,
+          "column": 10,
+          "line": 31,
         },
         "start": Object {
-          "column": 4,
-          "line": 38,
+          "column": 10,
+          "line": 31,
         },
       },
       "locations": Array [
         Object {
           "end": Object {
-            "column": 4,
-            "line": 38,
+            "column": 10,
+            "line": 31,
           },
           "start": Object {
-            "column": 4,
-            "line": 38,
+            "column": 10,
+            "line": 31,
           },
         },
       ],
@@ -2379,13 +2379,6 @@ Object {
     "29": 1,
     "3": 1,
     "30": 1,
-    "31": 1,
-    "32": 1,
-    "33": 1,
-    "34": 1,
-    "35": 1,
-    "36": 1,
-    "37": 1,
     "4": 1,
     "5": 1,
     "6": 1,
@@ -2642,76 +2635,6 @@ Object {
       "start": Object {
         "column": 0,
         "line": 31,
-      },
-    },
-    "31": Object {
-      "end": Object {
-        "column": 0,
-        "line": 32,
-      },
-      "start": Object {
-        "column": 0,
-        "line": 32,
-      },
-    },
-    "32": Object {
-      "end": Object {
-        "column": 15,
-        "line": 33,
-      },
-      "start": Object {
-        "column": 0,
-        "line": 33,
-      },
-    },
-    "33": Object {
-      "end": Object {
-        "column": 14,
-        "line": 34,
-      },
-      "start": Object {
-        "column": 0,
-        "line": 34,
-      },
-    },
-    "34": Object {
-      "end": Object {
-        "column": 22,
-        "line": 35,
-      },
-      "start": Object {
-        "column": 0,
-        "line": 35,
-      },
-    },
-    "35": Object {
-      "end": Object {
-        "column": 28,
-        "line": 36,
-      },
-      "start": Object {
-        "column": 0,
-        "line": 36,
-      },
-    },
-    "36": Object {
-      "end": Object {
-        "column": 1,
-        "line": 37,
-      },
-      "start": Object {
-        "column": 0,
-        "line": 37,
-      },
-    },
-    "37": Object {
-      "end": Object {
-        "column": 4,
-        "line": 38,
-      },
-      "start": Object {
-        "column": 0,
-        "line": 38,
       },
     },
     "4": Object {
