@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.1.0](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v5.0.1...v5.1.0) (2020-10-04)
+
+
+### Features
+
+* add support for 1:1 sourcesContent ([ac3c79a](https://www.github.com/istanbuljs/v8-to-istanbul/commit/ac3c79a688665e9f3f05aafe9295a3d71a21267d))
+
 ### [5.0.1](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v5.0.0...v5.0.1) (2020-08-07)
 
 
