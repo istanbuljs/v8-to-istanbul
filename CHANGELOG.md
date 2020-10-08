@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.0.0](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v5.0.1...v6.0.0) (2020-10-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* address off by one error processing branches (#118)
+
+### Features
+
+* add support for 1:1 sourcesContent ([ac3c79a](https://www.github.com/istanbuljs/v8-to-istanbul/commit/ac3c79a688665e9f3f05aafe9295a3d71a21267d))
+
+
+### Bug Fixes
+
+* address off by one error processing branches ([#118](https://www.github.com/istanbuljs/v8-to-istanbul/issues/118)) ([abe51ea](https://www.github.com/istanbuljs/v8-to-istanbul/commit/abe51ea344171c827a014a8c86b3d3a2be5370ce))
+* favor mapping at 0th column ([#120](https://www.github.com/istanbuljs/v8-to-istanbul/issues/120)) ([770f17f](https://www.github.com/istanbuljs/v8-to-istanbul/commit/770f17f49e2bf323bdc26f55f91adfedcbb94e25))
+
 ### [5.0.1](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v5.0.0...v5.0.1) (2020-08-07)
 
 
