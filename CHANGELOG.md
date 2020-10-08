@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.0.1](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v6.0.0...v6.0.1) (2020-10-08)
+
+
+### Bug Fixes
+
+* **build:** use new relese-please strategy ([c8edd37](https://www.github.com/istanbuljs/v8-to-istanbul/commit/c8edd3741f803dd7485d01ee6f4fcf6a73570700))
+* **source-maps:** reverts off by one fix for ignore ([#123](https://www.github.com/istanbuljs/v8-to-istanbul/issues/123)) ([a886fb8](https://www.github.com/istanbuljs/v8-to-istanbul/commit/a886fb82d7e2c5332c6e507e201a9378dda84f50))
+
 ## [6.0.0](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v5.0.1...v6.0.0) (2020-10-08)
 
 
