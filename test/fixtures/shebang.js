@@ -1,5 +1,6 @@
 module.exports = {
   describe: 'shebang',
+  maxNodeVersion: 'v13.0.0',
   coverageV8: {
     "scriptId": "56",
     "url": "./test/fixtures/scripts/shebang.js",

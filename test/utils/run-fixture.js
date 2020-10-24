@@ -2,6 +2,7 @@
 
 const toIstanbul = require('../../')
 const t = require('tap')
+const semver = require('semver')
 
 t.mochaGlobals()
 require('should')
@@ -9,6 +10,11 @@ require('should')
 module.exports = async (fixture) => {
   const script = toIstanbul(fixture.coverageV8.url)
   await script.load()
+  if (fixture.maxNodeVersion && !semver.lt(process.version, fixture.maxNodeVersion)) {
+    console.info(`skipping "${fixture.describe}" fixture maxNodeVersion = ${fixture.maxNodeVersion}`)
+    return
+  }
+
   script.applyCoverage(fixture.coverageV8.functions)
 
   let coverageIstanbul = script.toIstanbul()
