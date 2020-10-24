@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.0.2](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v6.0.1...v6.0.2) (2020-10-24)
+
+
+### Bug Fixes
+
+* drop special shebang handling ([#125](https://www.github.com/istanbuljs/v8-to-istanbul/issues/125)) ([0d3b57f](https://www.github.com/istanbuljs/v8-to-istanbul/commit/0d3b57f245003d934c0a824f1b6fe54dcebacdb7))
+* shebang handling supported in Node v12 ([#128](https://www.github.com/istanbuljs/v8-to-istanbul/issues/128)) ([522e4c2](https://www.github.com/istanbuljs/v8-to-istanbul/commit/522e4c25e6693e31191b47fc5729b6aff9909ce3))
+
 ### [6.0.1](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v6.0.0...v6.0.1) (2020-10-08)
 
 
