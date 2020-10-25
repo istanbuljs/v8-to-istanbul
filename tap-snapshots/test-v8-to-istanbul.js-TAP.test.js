@@ -7,6 +7,7 @@
 'use strict'
 exports['test/v8-to-istanbul.js TAP > must match branches snapshot 1'] = `
 Object {
+  "all": false,
   "b": Object {
     "0": Array [
       1,
@@ -36,7 +37,7 @@ Object {
       1,
     ],
     "9": Array [
-      0,
+      1,
     ],
   },
   "branchMap": Object {
@@ -275,15 +276,15 @@ Object {
       "type": "branch",
     },
     "9": Object {
-      "line": 34,
+      "line": 35,
       "loc": Object {
         "end": Object {
           "column": 0,
           "line": 37,
         },
         "start": Object {
-          "column": 14,
-          "line": 34,
+          "column": -1,
+          "line": 35,
         },
       },
       "locations": Array [
@@ -293,8 +294,8 @@ Object {
             "line": 37,
           },
           "start": Object {
-            "column": 14,
-            "line": 34,
+            "column": -1,
+            "line": 35,
           },
         },
       ],
@@ -782,6 +783,7 @@ Object {
 
 exports['test/v8-to-istanbul.js TAP > must match functions snapshot 1'] = `
 Object {
+  "all": false,
   "b": Object {
     "0": Array [
       1,
@@ -1763,6 +1765,7 @@ Object {
 
 exports['test/v8-to-istanbul.js TAP > must match mixed new lines snapshot 1'] = `
 Object {
+  "all": false,
   "b": Object {
     "0": Array [
       1,
@@ -1869,6 +1872,7 @@ Object {
 
 exports['test/v8-to-istanbul.js TAP > must match shebang snapshot 1'] = `
 Object {
+  "all": false,
   "b": Object {
     "0": Array [
       1,
@@ -1879,15 +1883,15 @@ Object {
   },
   "branchMap": Object {
     "0": Object {
-      "line": 1,
+      "line": 2,
       "loc": Object {
         "end": Object {
           "column": 7,
           "line": 8,
         },
         "start": Object {
-          "column": 19,
-          "line": 1,
+          "column": -1,
+          "line": 2,
         },
       },
       "locations": Array [
@@ -1897,8 +1901,8 @@ Object {
             "line": 8,
           },
           "start": Object {
-            "column": 19,
-            "line": 1,
+            "column": -1,
+            "line": 2,
           },
         },
       ],
@@ -2030,14 +2034,12 @@ Object {
 
 exports['test/v8-to-istanbul.js TAP > must match source-map and minified source snapshot 1'] = `
 Object {
+  "all": false,
   "b": Object {
     "0": Array [
-      1,
-    ],
-    "1": Array [
       0,
     ],
-    "10": Array [
+    "1": Array [
       0,
     ],
     "2": Array [
@@ -2047,52 +2049,23 @@ Object {
       0,
     ],
     "4": Array [
-      0,
+      1,
     ],
     "5": Array [
       0,
     ],
     "6": Array [
-      1,
+      0,
     ],
     "7": Array [
-      0,
+      1,
     ],
     "8": Array [
       0,
     ],
-    "9": Array [
-      1,
-    ],
   },
   "branchMap": Object {
     "0": Object {
-      "line": 31,
-      "loc": Object {
-        "end": Object {
-          "column": 10,
-          "line": 31,
-        },
-        "start": Object {
-          "column": 10,
-          "line": 31,
-        },
-      },
-      "locations": Array [
-        Object {
-          "end": Object {
-            "column": 10,
-            "line": 31,
-          },
-          "start": Object {
-            "column": 10,
-            "line": 31,
-          },
-        },
-      ],
-      "type": "branch",
-    },
-    "1": Object {
       "line": 5,
       "loc": Object {
         "end": Object {
@@ -2118,33 +2091,7 @@ Object {
       ],
       "type": "branch",
     },
-    "10": Object {
-      "line": 29,
-      "loc": Object {
-        "end": Object {
-          "column": 10,
-          "line": 30,
-        },
-        "start": Object {
-          "column": 0,
-          "line": 29,
-        },
-      },
-      "locations": Array [
-        Object {
-          "end": Object {
-            "column": 10,
-            "line": 30,
-          },
-          "start": Object {
-            "column": 0,
-            "line": 29,
-          },
-        },
-      ],
-      "type": "branch",
-    },
-    "2": Object {
+    "1": Object {
       "line": 8,
       "loc": Object {
         "end": Object {
@@ -2170,7 +2117,7 @@ Object {
       ],
       "type": "branch",
     },
-    "3": Object {
+    "2": Object {
       "line": 11,
       "loc": Object {
         "end": Object {
@@ -2196,7 +2143,7 @@ Object {
       ],
       "type": "branch",
     },
-    "4": Object {
+    "3": Object {
       "line": 14,
       "loc": Object {
         "end": Object {
@@ -2222,33 +2169,7 @@ Object {
       ],
       "type": "branch",
     },
-    "5": Object {
-      "line": 31,
-      "loc": Object {
-        "end": Object {
-          "column": 10,
-          "line": 31,
-        },
-        "start": Object {
-          "column": 10,
-          "line": 31,
-        },
-      },
-      "locations": Array [
-        Object {
-          "end": Object {
-            "column": 10,
-            "line": 31,
-          },
-          "start": Object {
-            "column": 10,
-            "line": 31,
-          },
-        },
-      ],
-      "type": "branch",
-    },
-    "6": Object {
+    "4": Object {
       "line": 1,
       "loc": Object {
         "end": Object {
@@ -2274,7 +2195,7 @@ Object {
       ],
       "type": "branch",
     },
-    "7": Object {
+    "5": Object {
       "line": 1,
       "loc": Object {
         "end": Object {
@@ -2300,7 +2221,7 @@ Object {
       ],
       "type": "branch",
     },
-    "8": Object {
+    "6": Object {
       "line": 2,
       "loc": Object {
         "end": Object {
@@ -2326,7 +2247,7 @@ Object {
       ],
       "type": "branch",
     },
-    "9": Object {
+    "7": Object {
       "line": 20,
       "loc": Object {
         "end": Object {
@@ -2347,6 +2268,32 @@ Object {
           "start": Object {
             "column": 12,
             "line": 20,
+          },
+        },
+      ],
+      "type": "branch",
+    },
+    "8": Object {
+      "line": 29,
+      "loc": Object {
+        "end": Object {
+          "column": 10,
+          "line": 30,
+        },
+        "start": Object {
+          "column": 0,
+          "line": 29,
+        },
+      },
+      "locations": Array [
+        Object {
+          "end": Object {
+            "column": 10,
+            "line": 30,
+          },
+          "start": Object {
+            "column": 0,
+            "line": 29,
           },
         },
       ],
@@ -2732,6 +2679,7 @@ Object {
 
 exports['test/v8-to-istanbul.js TAP > must match source-map with multiple source files snapshot 1'] = `
 Object {
+  "all": false,
   "b": Object {},
   "branchMap": Object {},
   "f": Object {
