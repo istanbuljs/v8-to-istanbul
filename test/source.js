@@ -74,5 +74,29 @@ describe('Source', () => {
       source.lines[1].ignore.should.equal(true)
       source.lines[2].ignore.should.equal(false)
     })
+
+    it('ignores lines between start and stop', () => {
+      const sourceRaw = `
+      /* c8 ignore start */
+      function ignoreMe() {
+        // ...
+      }
+      /* c8 ignore stop */
+
+      function doNotIgnoreMe() {
+        // ...
+      }
+      `
+      const source = new CovSource(sourceRaw, 0)
+      source.lines[1].ignore.should.equal(true)
+      source.lines[2].ignore.should.equal(true)
+      source.lines[3].ignore.should.equal(true)
+      source.lines[4].ignore.should.equal(true)
+      source.lines[5].ignore.should.equal(true)
+      source.lines[6].ignore.should.equal(false)
+      source.lines[7].ignore.should.equal(false)
+      source.lines[8].ignore.should.equal(false)
+      source.lines[9].ignore.should.equal(false)
+    })
   })
 })
