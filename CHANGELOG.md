@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.1.0](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v7.0.0...v7.1.0) (2020-12-22)
+
+
+### Features
+
+* support comment c8 ignore start/stop ([#130](https://www.github.com/istanbuljs/v8-to-istanbul/issues/130)) ([591126b](https://www.github.com/istanbuljs/v8-to-istanbul/commit/591126b102244465b27906cdb8cdb82df1f4e760))
+
 ## [7.0.0](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v6.0.1...v7.0.0) (2020-10-25)
 
 
