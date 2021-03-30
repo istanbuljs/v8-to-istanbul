@@ -1,6 +1,6 @@
 {
   "name": "v8-to-istanbul",
-  "version": "7.1.0",
+  "version": "7.1.1",
   "description": "convert from v8 coverage format to istanbul's format",
   "main": "index.js",
   "types": "index.d.ts",
