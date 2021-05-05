@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.1.2](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v7.1.1...v7.1.2) (2021-05-05)
+
+
+### Bug Fixes
+
+* fix undefined line in branches and functions ([#139](https://www.github.com/istanbuljs/v8-to-istanbul/issues/139)) ([f5ed83d](https://www.github.com/istanbuljs/v8-to-istanbul/commit/f5ed83d185129db48e5c05c5225470ad114c7609))
+
 ### [7.1.1](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v7.1.0...v7.1.1) (2021-03-30)
 
 
