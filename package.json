@@ -7,7 +7,7 @@
   "scripts": {
     "fix": "standard --fix",
     "snapshot": "TAP_SNAPSHOT=1 tap test/*.js",
-    "test": "c8 --reporter=html --reporter=text tap --no-coverage --no-esm test/*.js",
+    "test": "c8 --reporter=html --reporter=text tap --no-coverage test/*.js",
     "posttest": "standard",
     "coverage": "c8 report --check-coverage"
   },
@@ -35,7 +35,7 @@
     "semver": "^7.3.2",
     "should": "13.2.3",
     "standard": "^16.0.0",
-    "tap": "^14.10.8"
+    "tap": "^15.0.0"
   },
   "engines": {
     "node": ">=10.12.0"
