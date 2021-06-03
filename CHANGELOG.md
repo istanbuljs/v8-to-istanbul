@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.0.0](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v7.1.2...v8.0.0) (2021-06-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* minimum Node version now 10.12.
+
+### Bug Fixes
+
+* address file URL path regression on Windows ([#146](https://www.github.com/istanbuljs/v8-to-istanbul/issues/146)) ([bb04c56](https://www.github.com/istanbuljs/v8-to-istanbul/commit/bb04c561bffe9802b7d2e7e91216aa1d9230490a))
+
 ### [7.1.2](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v7.1.1...v7.1.2) (2021-05-05)
 
 
