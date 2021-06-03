@@ -1,6 +1,7 @@
 /* global describe, it, beforeEach, afterEach */
 const { readdirSync, lstatSync, writeFileSync, readFileSync } = require('fs')
 const path = require('path')
+const { pathToFileURL } = require('url')
 const runFixture = require('./utils/run-fixture')
 const V8ToIstanbul = require('../lib/v8-to-istanbul')
 const crypto = require('crypto')
@@ -25,7 +26,7 @@ describe('V8ToIstanbul', async () => {
 
     it('handles ESM style paths', async () => {
       const v8ToIstanbul = new V8ToIstanbul(
-        `file://${require.resolve('./fixtures/scripts/functions.js')}`,
+        pathToFileURL(require.resolve('./fixtures/scripts/functions.js')).href,
         0
       )
       await v8ToIstanbul.load()
@@ -94,7 +95,7 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
 
     it('should clamp line source column >= 0', async () => {
       const v8ToIstanbul = new V8ToIstanbul(
-        `file://${require.resolve('./fixtures/scripts/needs-compile.compiled.js')}`,
+        pathToFileURL(require.resolve('./fixtures/scripts/needs-compile.compiled.js')).href,
         0
       )
 
@@ -124,7 +125,7 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
 
     it('should exclude files when passing excludePath', async () => {
       const v8ToIstanbul = new V8ToIstanbul(
-        `file://${require.resolve('./fixtures/scripts/sourcemap-multisource.js')}`,
+        pathToFileURL(require.resolve('./fixtures/scripts/sourcemap-multisource.js')).href,
         0,
         undefined,
         path => path.indexOf('bootstrap') > -1
@@ -137,7 +138,7 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
           endOffset: 1
         }]
       }])
-      Object.keys(v8ToIstanbul.toIstanbul()).should.eql(['/src/index.ts', '/src/utils.ts'])
+      Object.keys(v8ToIstanbul.toIstanbul()).should.eql(['/src/index.ts', '/src/utils.ts'].map(path.normalize))
     })
   })
 
@@ -152,7 +153,7 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
     })
     it('should handle empty sources in a sourcemap', async () => {
       const v8ToIstanbul = new V8ToIstanbul(
-        `file://${require.resolve('./fixtures/scripts/empty.compiled.js')}`,
+        pathToFileURL(require.resolve('./fixtures/scripts/empty.compiled.js')).href,
         0
       )
       await v8ToIstanbul.load()
@@ -160,22 +161,22 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
 
     it('should handle relative sourceRoots correctly', async () => {
       const v8ToIstanbul = new V8ToIstanbul(
-        `file://${require.resolve('./fixtures/scripts/relative-source-root.compiled.js')}`,
+        pathToFileURL(require.resolve('./fixtures/scripts/relative-source-root.compiled.js')).href,
         0
       )
       await v8ToIstanbul.load()
-      assert(v8ToIstanbul.path.includes('v8-to-istanbul/test/fixtures/one-up/relative-source-root.js'))
+      assert(v8ToIstanbul.path.includes(path.normalize('v8-to-istanbul/test/fixtures/one-up/relative-source-root.js')))
     })
 
-    it('should handles source maps with moultiple sources', async () => {
+    it('should handles source maps with multiple sources', async () => {
       const v8ToIstanbul = new V8ToIstanbul(
-        `file://${require.resolve('./fixtures/scripts/sourcemap-multisource.js')}`,
+        pathToFileURL(require.resolve('./fixtures/scripts/sourcemap-multisource.js')).href,
         0
       )
       await v8ToIstanbul.load()
 
       v8ToIstanbul.covSources.length.should.equal(3)
-      Object.keys(v8ToIstanbul.toIstanbul()).should.eql(['/webpack/bootstrap', '/src/index.ts', '/src/utils.ts'])
+      Object.keys(v8ToIstanbul.toIstanbul()).should.eql(['/webpack/bootstrap', '/src/index.ts', '/src/utils.ts'].map(path.normalize))
     })
   })
 
