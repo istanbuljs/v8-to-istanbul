@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.1.0](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v8.0.0...v8.1.0) (2021-09-27)
+
+
+### Features
+
+* function to cleanup allocated resources after usage ([#161](https://www.github.com/istanbuljs/v8-to-istanbul/issues/161)) ([a3925e9](https://www.github.com/istanbuljs/v8-to-istanbul/commit/a3925e9951fa88daee0aae5a7d35546b10f063a8))
+
 ## [8.0.0](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v7.1.2...v8.0.0) (2021-06-03)
 
 
