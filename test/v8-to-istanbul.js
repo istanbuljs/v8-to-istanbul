@@ -10,7 +10,7 @@ const sourcemap = require('source-map')
 const assert = require('assert')
 
 require('tap').mochaGlobals()
-require('should')
+const should = require('should')
 
 describe('V8ToIstanbul', async () => {
   describe('constructor', () => {
@@ -194,6 +194,20 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
 
       v8ToIstanbul.destroy()
     })
+  })
+
+  it('destroy cleans up source map', async () => {
+    const v8ToIstanbul = new V8ToIstanbul(
+      pathToFileURL(require.resolve('./fixtures/scripts/empty.compiled.js')).href
+    )
+    await v8ToIstanbul.load()
+    // assertion only to check test data and setup - source map must be loaded,
+    // otherwise destroy would have no effect anyway
+    assert(v8ToIstanbul.sourceMap !== undefined, 'Test fixture must load a source map')
+
+    v8ToIstanbul.destroy()
+
+    should.not.exist(v8ToIstanbul.sourceMap)
   })
 
   // execute JavaScript files in fixtures directory; these
