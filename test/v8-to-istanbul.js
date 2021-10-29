@@ -196,6 +196,22 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
     })
   })
 
+  it('test no sourcemap content', async () => {
+    const v8ToIstanbul = new V8ToIstanbul(
+      pathToFileURL(require.resolve('./fixtures/scripts/no-sourcemap-content.compiled.js')).href
+    )
+    await v8ToIstanbul.load()
+    v8ToIstanbul.destroy()
+  })
+
+  it('test sourcemap content had null', async () => {
+    const v8ToIstanbul = new V8ToIstanbul(
+      pathToFileURL(require.resolve('./fixtures/scripts/sourcecontent-null.compiled.js')).href
+    )
+    await v8ToIstanbul.load()
+    v8ToIstanbul.destroy()
+  })
+
   it('destroy cleans up source map', async () => {
     const v8ToIstanbul = new V8ToIstanbul(
       pathToFileURL(require.resolve('./fixtures/scripts/empty.compiled.js')).href

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": ["no-sourcemap-content-lib.js", "no-sourcemap-content.js"],
+  "mappings": ";;;;;;AAAA;AAAA;AAAA,oBAAa,GAAG,GAAG;AACjB,eAAO,IAAI;AAAA;AAGb,aAAO,UAAU;AAAA;AAAA;;;ACJjB,MAAM,MAAM;AAEZ,MAAI,GAAE;",
+  "names": []
+}

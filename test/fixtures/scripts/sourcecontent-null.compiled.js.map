@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["sourcecontent-null-lib.js", "sourcecontent-null.js"],
+  "sourcesContent": [null, "require('./sourcecontent-null-lib');\n"],
+  "mappings": ";;;;;;AAAA;AAAA;AAAA;AAAA;;;ACAA;",
+  "names": []
+}
