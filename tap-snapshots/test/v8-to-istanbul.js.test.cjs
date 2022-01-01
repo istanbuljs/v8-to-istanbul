@@ -781,6 +781,289 @@ Object {
 }
 `
 
+exports['test/v8-to-istanbul.js TAP > must match early return snapshot 1'] = `
+Object {
+  "all": false,
+  "b": Object {
+    "0": Array [
+      1,
+    ],
+    "1": Array [
+      1,
+    ],
+    "2": Array [
+      0,
+    ],
+    "3": Array [
+      1,
+    ],
+  },
+  "branchMap": Object {
+    "0": Object {
+      "line": 1,
+      "loc": Object {
+        "end": Object {
+          "column": 13,
+          "line": 9,
+        },
+        "start": Object {
+          "column": 0,
+          "line": 1,
+        },
+      },
+      "locations": Array [
+        Object {
+          "end": Object {
+            "column": 13,
+            "line": 9,
+          },
+          "start": Object {
+            "column": 0,
+            "line": 1,
+          },
+        },
+      ],
+      "type": "branch",
+    },
+    "1": Object {
+      "line": 1,
+      "loc": Object {
+        "end": Object {
+          "column": 1,
+          "line": 7,
+        },
+        "start": Object {
+          "column": 0,
+          "line": 1,
+        },
+      },
+      "locations": Array [
+        Object {
+          "end": Object {
+            "column": 1,
+            "line": 7,
+          },
+          "start": Object {
+            "column": 0,
+            "line": 1,
+          },
+        },
+      ],
+      "type": "branch",
+    },
+    "2": Object {
+      "line": 3,
+      "loc": Object {
+        "end": Object {
+          "column": 4,
+          "line": 6,
+        },
+        "start": Object {
+          "column": -1,
+          "line": 3,
+        },
+      },
+      "locations": Array [
+        Object {
+          "end": Object {
+            "column": 4,
+            "line": 6,
+          },
+          "start": Object {
+            "column": -1,
+            "line": 3,
+          },
+        },
+      ],
+      "type": "branch",
+    },
+    "3": Object {
+      "line": 4,
+      "loc": Object {
+        "end": Object {
+          "column": 3,
+          "line": 6,
+        },
+        "start": Object {
+          "column": 2,
+          "line": 4,
+        },
+      },
+      "locations": Array [
+        Object {
+          "end": Object {
+            "column": 3,
+            "line": 6,
+          },
+          "start": Object {
+            "column": 2,
+            "line": 4,
+          },
+        },
+      ],
+      "type": "branch",
+    },
+  },
+  "f": Object {
+    "0": 1,
+    "1": 1,
+  },
+  "fnMap": Object {
+    "0": Object {
+      "decl": Object {
+        "end": Object {
+          "column": 1,
+          "line": 7,
+        },
+        "start": Object {
+          "column": 0,
+          "line": 1,
+        },
+      },
+      "line": 1,
+      "loc": Object {
+        "end": Object {
+          "column": 1,
+          "line": 7,
+        },
+        "start": Object {
+          "column": 0,
+          "line": 1,
+        },
+      },
+      "name": "test",
+    },
+    "1": Object {
+      "decl": Object {
+        "end": Object {
+          "column": 3,
+          "line": 6,
+        },
+        "start": Object {
+          "column": 2,
+          "line": 4,
+        },
+      },
+      "line": 4,
+      "loc": Object {
+        "end": Object {
+          "column": 3,
+          "line": 6,
+        },
+        "start": Object {
+          "column": 2,
+          "line": 4,
+        },
+      },
+      "name": "bar",
+    },
+  },
+  "s": Object {
+    "0": 1,
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "4": 1,
+    "5": 1,
+    "6": 1,
+    "7": 1,
+    "8": 1,
+  },
+  "statementMap": Object {
+    "0": Object {
+      "end": Object {
+        "column": 28,
+        "line": 1,
+      },
+      "start": Object {
+        "column": 0,
+        "line": 1,
+      },
+    },
+    "1": Object {
+      "end": Object {
+        "column": 15,
+        "line": 2,
+      },
+      "start": Object {
+        "column": 0,
+        "line": 2,
+      },
+    },
+    "2": Object {
+      "end": Object {
+        "column": 2,
+        "line": 3,
+      },
+      "start": Object {
+        "column": 0,
+        "line": 3,
+      },
+    },
+    "3": Object {
+      "end": Object {
+        "column": 18,
+        "line": 4,
+      },
+      "start": Object {
+        "column": 0,
+        "line": 4,
+      },
+    },
+    "4": Object {
+      "end": Object {
+        "column": 24,
+        "line": 5,
+      },
+      "start": Object {
+        "column": 0,
+        "line": 5,
+      },
+    },
+    "5": Object {
+      "end": Object {
+        "column": 3,
+        "line": 6,
+      },
+      "start": Object {
+        "column": 0,
+        "line": 6,
+      },
+    },
+    "6": Object {
+      "end": Object {
+        "column": 1,
+        "line": 7,
+      },
+      "start": Object {
+        "column": 0,
+        "line": 7,
+      },
+    },
+    "7": Object {
+      "end": Object {
+        "column": 0,
+        "line": 8,
+      },
+      "start": Object {
+        "column": 0,
+        "line": 8,
+      },
+    },
+    "8": Object {
+      "end": Object {
+        "column": 13,
+        "line": 9,
+      },
+      "start": Object {
+        "column": 0,
+        "line": 9,
+      },
+    },
+  },
+}
+`
+
 exports['test/v8-to-istanbul.js TAP > must match functions snapshot 1'] = `
 Object {
   "all": false,
@@ -2842,7 +3125,7 @@ Object {
     "37": 0,
     "38": 1,
     "39": 1,
-    "4": 1,
+    "4": 2,
     "40": 1,
     "41": 1,
     "42": 1,
