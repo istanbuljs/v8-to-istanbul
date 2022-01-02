@@ -279,8 +279,8 @@ Object {
       "line": 35,
       "loc": Object {
         "end": Object {
-          "column": 29,
-          "line": 36,
+          "column": 0,
+          "line": 37,
         },
         "start": Object {
           "column": -1,
@@ -290,8 +290,8 @@ Object {
       "locations": Array [
         Object {
           "end": Object {
-            "column": 29,
-            "line": 36,
+            "column": 0,
+            "line": 37,
           },
           "start": Object {
             "column": -1,
