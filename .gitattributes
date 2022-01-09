@@ -1,3 +1,6 @@
 test/fixtures/scripts/needs-compile.js eol=crlf
 test/fixtures/scripts/needs-compile.compiled.js eol=crlf
 test/fixtures/scripts/needs-compile.compiled.js.map eol=crlf
+test/fixtures/scripts/branches.covered.js eol=lf
+test/fixtures/scripts/branches.js eol=lf
+test/fixtures/scripts/functions.js eol=lf

@@ -1,6 +1,7 @@
 /* global describe, it */
 
 const CovSource = require('../lib/source')
+const { SourceMapConsumer } = require('source-map')
 
 require('tap').mochaGlobals()
 require('should')
@@ -37,6 +38,30 @@ describe('Source', () => {
       const sourceRaw = ''
       const source = new CovSource(sourceRaw, 0)
       source.offsetToOriginalRelative(undefined, Infinity, Infinity).should.deepEqual({})
+    })
+
+    it('range crossing two sourcemaps', async () => {
+      const sourceRaw = `\
+(() => {
+  // hello.ts
+  function hello() {
+    console.log("hello world");
+  }
+
+  // greet.ts
+  hello();
+})();
+//# sourceMappingURL=greet.js.map\
+`
+      const source = new CovSource(sourceRaw, 0)
+      const sourceMap = await new SourceMapConsumer({
+        version: 3,
+        sources: ['../hello.ts', '../greet.ts'],
+        sourcesContent: ['export function hello() {\r\n  console.log("hello world")\r\n}', 'import {hello} from "./hello"\r\n\r\nhello()\r\n'],
+        mappings: ';;AAAO,mBAAiB;AACtB,YAAQ,IAAI;AAAA;;;ACCd;',
+        names: []
+      })
+      source.offsetToOriginalRelative(sourceMap, 25, 97).should.deepEqual({})
     })
   })
 
