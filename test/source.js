@@ -40,6 +40,11 @@ describe('Source', () => {
       source.offsetToOriginalRelative(undefined, Infinity, Infinity).should.deepEqual({})
     })
 
+    it('accepts null', () => {
+      const sourceRaw = null
+      new CovSource(sourceRaw, 0).should.ok()
+    })
+
     it('range crossing two sourcemaps', async () => {
       const sourceRaw = `\
 (() => {
