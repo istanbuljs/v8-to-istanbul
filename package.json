@@ -30,12 +30,12 @@
     "source-map": "^0.7.3"
   },
   "devDependencies": {
-    "@types/node": "^14.0.0",
+    "@types/node": "^16.0.0",
     "c8": "^7.2.1",
     "semver": "^7.3.2",
     "should": "13.2.3",
     "standard": "^16.0.4",
-    "tap": "^15.0.10"
+    "tap": "^15.1.6"
   },
   "engines": {
     "node": ">=10.12.0"
