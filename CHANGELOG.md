@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.1.1](https://github.com/istanbuljs/v8-to-istanbul/compare/v8.1.0...v8.1.1) (2022-01-10)
+
+
+### Bug Fixes
+
+* handle undefined sourcesContent and null sourcesContent entry ([6c2e2ec](https://github.com/istanbuljs/v8-to-istanbul/commit/6c2e2ecd2aece8b01543f75dfa203744f8a785b9))
+* **perf:** optimize hit counting and source map performance ([3f83226](https://github.com/istanbuljs/v8-to-istanbul/commit/3f83226212e9fd26231bb313b36db4f2d0661970)), closes [#159](https://github.com/istanbuljs/v8-to-istanbul/issues/159)
+
 ## [8.1.0](https://www.github.com/istanbuljs/v8-to-istanbul/compare/v8.0.0...v8.1.0) (2021-09-27)
 
 
