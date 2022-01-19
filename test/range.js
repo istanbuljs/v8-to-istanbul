@@ -29,7 +29,18 @@ describe('range', () => {
         { startCol: 25, endCol: 30 }
       ]
       sliceRange(SIX_LINES, 5, 14).should.eql(SIX_LINES.slice(1, 3))
-      sliceRange(SIX_LINES, 15, 21).should.eql(SIX_LINES.slice(3, 5))
+      sliceRange(SIX_LINES, 15, 22).should.eql(SIX_LINES.slice(3, 5))
+    })
+    it('exclusive/inclusive ranges', () => {
+      const SIX_LINES = [
+        { startCol: 0, endCol: 14 },
+        { startCol: 15, endCol: 20 },
+        { startCol: 21, endCol: 24 },
+        { startCol: 25, endCol: 30 }
+      ]
+      sliceRange(SIX_LINES, 20, 24).should.eql([])
+      sliceRange(SIX_LINES, 20, 24, true).should.eql(SIX_LINES.slice(1, 3))
+      sliceRange(SIX_LINES, 21, 25).should.eql(SIX_LINES.slice(2, 3))
     })
   })
 })
