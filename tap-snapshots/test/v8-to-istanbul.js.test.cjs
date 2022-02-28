@@ -2008,7 +2008,7 @@ Object {
   "all": false,
   "b": Object {
     "0": Array [
-      0,
+      1,
     ],
     "1": Array [
       0,
@@ -2020,23 +2020,52 @@ Object {
       0,
     ],
     "4": Array [
-      1,
+      0,
     ],
     "5": Array [
-      0,
+      1,
     ],
     "6": Array [
       0,
     ],
     "7": Array [
-      1,
+      0,
     ],
     "8": Array [
+      1,
+    ],
+    "9": Array [
       0,
     ],
   },
   "branchMap": Object {
     "0": Object {
+      "line": 1,
+      "loc": Object {
+        "end": Object {
+          "column": 6,
+          "line": 30,
+        },
+        "start": Object {
+          "column": 0,
+          "line": 1,
+        },
+      },
+      "locations": Array [
+        Object {
+          "end": Object {
+            "column": 6,
+            "line": 30,
+          },
+          "start": Object {
+            "column": 0,
+            "line": 1,
+          },
+        },
+      ],
+      "type": "branch",
+    },
+    "1": Object {
       "line": 5,
       "loc": Object {
         "end": Object {
@@ -2062,7 +2091,7 @@ Object {
       ],
       "type": "branch",
     },
-    "1": Object {
+    "2": Object {
       "line": 8,
       "loc": Object {
         "end": Object {
@@ -2088,7 +2117,7 @@ Object {
       ],
       "type": "branch",
     },
-    "2": Object {
+    "3": Object {
       "line": 11,
       "loc": Object {
         "end": Object {
@@ -2114,7 +2143,7 @@ Object {
       ],
       "type": "branch",
     },
-    "3": Object {
+    "4": Object {
       "line": 14,
       "loc": Object {
         "end": Object {
@@ -2140,7 +2169,7 @@ Object {
       ],
       "type": "branch",
     },
-    "4": Object {
+    "5": Object {
       "line": 1,
       "loc": Object {
         "end": Object {
@@ -2166,7 +2195,7 @@ Object {
       ],
       "type": "branch",
     },
-    "5": Object {
+    "6": Object {
       "line": 1,
       "loc": Object {
         "end": Object {
@@ -2192,7 +2221,7 @@ Object {
       ],
       "type": "branch",
     },
-    "6": Object {
+    "7": Object {
       "line": 2,
       "loc": Object {
         "end": Object {
@@ -2218,7 +2247,7 @@ Object {
       ],
       "type": "branch",
     },
-    "7": Object {
+    "8": Object {
       "line": 20,
       "loc": Object {
         "end": Object {
@@ -2244,7 +2273,7 @@ Object {
       ],
       "type": "branch",
     },
-    "8": Object {
+    "9": Object {
       "line": 29,
       "loc": Object {
         "end": Object {
