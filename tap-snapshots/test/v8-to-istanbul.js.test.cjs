@@ -1877,6 +1877,9 @@ Object {
     "0": Array [
       1,
     ],
+    "1": Array [
+      1,
+    ],
   },
   "branchMap": Object {
     "0": Object {
@@ -1899,6 +1902,32 @@ Object {
           },
           "start": Object {
             "column": 0,
+            "line": 2,
+          },
+        },
+      ],
+      "type": "branch",
+    },
+    "1": Object {
+      "line": 2,
+      "loc": Object {
+        "end": Object {
+          "column": 7,
+          "line": 8,
+        },
+        "start": Object {
+          "column": 1,
+          "line": 2,
+        },
+      },
+      "locations": Array [
+        Object {
+          "end": Object {
+            "column": 7,
+            "line": 8,
+          },
+          "start": Object {
+            "column": 1,
             "line": 2,
           },
         },
