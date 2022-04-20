@@ -13,7 +13,7 @@ const v8toIstanbul = require('v8-to-istanbul')
 // the path to the original source-file is required, as its contents are
 // used during the conversion algorithm.
 const converter = v8toIstanbul('./path-to-instrumented-file.js')
-await converter.load() // this is required due to the async source-map dependency.
+await converter.load() // this is required due to async file reading.
 // provide an array of coverage information in v8 format.
 converter.applyCoverage([
   {

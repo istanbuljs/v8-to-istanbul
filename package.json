@@ -25,15 +25,16 @@
   "author": "Ben Coe <ben@npmjs.com>",
   "license": "ISC",
   "dependencies": {
+    "@jridgewell/trace-mapping": "^0.3.7",
     "@types/istanbul-lib-coverage": "^2.0.1",
-    "convert-source-map": "^1.6.0",
-    "source-map": "^0.7.3"
+    "convert-source-map": "^1.6.0"
   },
   "devDependencies": {
     "@types/node": "^16.0.0",
     "c8": "^7.2.1",
     "semver": "^7.3.2",
     "should": "13.2.3",
+    "source-map": "^0.7.3",
     "standard": "^16.0.4",
     "tap": "^15.1.6"
   },
