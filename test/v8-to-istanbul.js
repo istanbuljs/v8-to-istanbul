@@ -10,7 +10,6 @@ const sourcemap = require('source-map')
 const assert = require('assert')
 
 require('tap').mochaGlobals()
-const should = require('should')
 
 describe('V8ToIstanbul', async () => {
   describe('constructor', () => {
@@ -22,8 +21,6 @@ describe('V8ToIstanbul', async () => {
       v8ToIstanbul.covSources[0].source.lines.length.should.equal(48)
       v8ToIstanbul.covSources.length.should.equal(1)
       v8ToIstanbul.wrapperLength.should.equal(0) // common-js header.
-
-      v8ToIstanbul.destroy()
     })
 
     it('handles ESM style paths', async () => {
@@ -35,8 +32,6 @@ describe('V8ToIstanbul', async () => {
       v8ToIstanbul.covSources[0].source.lines.length.should.equal(48)
       v8ToIstanbul.covSources.length.should.equal(1)
       v8ToIstanbul.wrapperLength.should.equal(0) // ESM header.
-
-      v8ToIstanbul.destroy()
     })
 
     it('handles source maps with sourceRoot', async () => {
@@ -64,8 +59,6 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
       await v8ToIstanbul.load()
 
       v8ToIstanbul.path.should.equal(absoluteSourceFilePath)
-
-      v8ToIstanbul.destroy()
     })
 
     it('handles sourceContent', async () => {
@@ -97,8 +90,6 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
       // if the source is transpiled and since we didn't inline the source map into the transpiled source file
       // that means it was bale to access the content via the provided sources object
       v8ToIstanbul.sourceTranspiled.should.not.be.undefined()
-
-      v8ToIstanbul.destroy()
     })
 
     it('should clamp line source column >= 0', async () => {
@@ -129,8 +120,6 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
           endOffset: matchedNewLineChar + 10
         }]
       }])
-
-      v8ToIstanbul.destroy()
     })
 
     it('should exclude files when passing excludePath', async () => {
@@ -149,8 +138,6 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
         }]
       }])
       Object.keys(v8ToIstanbul.toIstanbul()).should.eql(['/src/index.ts', '/src/utils.ts'].map(path.normalize))
-
-      v8ToIstanbul.destroy()
     })
   })
 
@@ -169,7 +156,6 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
         0
       )
       await v8ToIstanbul.load()
-      v8ToIstanbul.destroy()
     })
 
     it('should handle relative sourceRoots correctly', async () => {
@@ -179,7 +165,6 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
       )
       await v8ToIstanbul.load()
       assert(v8ToIstanbul.path.includes(path.normalize('v8-to-istanbul/test/fixtures/one-up/relative-source-root.js')))
-      v8ToIstanbul.destroy()
     })
 
     it('should handles source maps with multiple sources', async () => {
@@ -191,8 +176,6 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
 
       v8ToIstanbul.covSources.length.should.equal(3)
       Object.keys(v8ToIstanbul.toIstanbul()).should.eql(['/webpack/bootstrap', '/src/index.ts', '/src/utils.ts'].map(path.normalize))
-
-      v8ToIstanbul.destroy()
     })
   })
 
@@ -201,7 +184,6 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
       pathToFileURL(require.resolve('./fixtures/scripts/no-sourcemap-content.compiled.js')).href
     )
     await v8ToIstanbul.load()
-    v8ToIstanbul.destroy()
   })
 
   it('test sourcemap content had null', async () => {
@@ -209,10 +191,9 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
       pathToFileURL(require.resolve('./fixtures/scripts/sourcecontent-null.compiled.js')).href
     )
     await v8ToIstanbul.load()
-    v8ToIstanbul.destroy()
   })
 
-  it('destroy cleans up source map', async () => {
+  it('destroy no longer cleans up source map', async () => {
     const v8ToIstanbul = new V8ToIstanbul(
       pathToFileURL(require.resolve('./fixtures/scripts/empty.compiled.js')).href
     )
@@ -223,7 +204,7 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
 
     v8ToIstanbul.destroy()
 
-    should.not.exist(v8ToIstanbul.sourceMap)
+    assert(v8ToIstanbul.sourceMap !== undefined)
   })
 
   // execute JavaScript files in fixtures directory; these
