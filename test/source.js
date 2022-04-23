@@ -1,7 +1,7 @@
 /* global describe, it */
 
 const CovSource = require('../lib/source')
-const { SourceMapConsumer } = require('source-map')
+const { TraceMap } = require('@jridgewell/trace-mapping')
 
 require('tap').mochaGlobals()
 require('should')
@@ -45,7 +45,7 @@ describe('Source', () => {
       new CovSource(sourceRaw, 0).should.ok()
     })
 
-    it('range crossing two sourcemaps', async () => {
+    it('range crossing two sourcemaps', () => {
       const sourceRaw = `\
 (() => {
   // hello.ts
@@ -59,7 +59,7 @@ describe('Source', () => {
 //# sourceMappingURL=greet.js.map\
 `
       const source = new CovSource(sourceRaw, 0)
-      const sourceMap = await new SourceMapConsumer({
+      const sourceMap = new TraceMap({
         version: 3,
         sources: ['../hello.ts', '../greet.ts'],
         sourcesContent: ['export function hello() {\r\n  console.log("hello world")\r\n}', 'import {hello} from "./hello"\r\n\r\nhello()\r\n'],
