@@ -2680,8 +2680,39 @@ Object {
 exports['test/v8-to-istanbul.js TAP > must match source-map with multiple source files snapshot 1'] = `
 Object {
   "all": false,
-  "b": Object {},
-  "branchMap": Object {},
+  "b": Object {
+    "0": Array [
+      1,
+    ],
+  },
+  "branchMap": Object {
+    "0": Object {
+      "line": 18,
+      "loc": Object {
+        "end": Object {
+          "column": 19,
+          "line": 22,
+        },
+        "start": Object {
+          "column": -1,
+          "line": 18,
+        },
+      },
+      "locations": Array [
+        Object {
+          "end": Object {
+            "column": 19,
+            "line": 22,
+          },
+          "start": Object {
+            "column": -1,
+            "line": 18,
+          },
+        },
+      ],
+      "type": "branch",
+    },
+  },
   "f": Object {
     "0": 2,
     "1": 0,
@@ -2689,6 +2720,8 @@ Object {
     "3": 0,
     "4": 0,
     "5": 0,
+    "6": 1,
+    "7": 0,
   },
   "fnMap": Object {
     "0": Object {
@@ -2835,27 +2868,75 @@ Object {
       },
       "name": "n.o",
     },
+    "6": Object {
+      "decl": Object {
+        "end": Object {
+          "column": 19,
+          "line": 22,
+        },
+        "start": Object {
+          "column": -1,
+          "line": 18,
+        },
+      },
+      "line": 18,
+      "loc": Object {
+        "end": Object {
+          "column": 19,
+          "line": 22,
+        },
+        "start": Object {
+          "column": -1,
+          "line": 18,
+        },
+      },
+      "name": "t.counter",
+    },
+    "7": Object {
+      "decl": Object {
+        "end": Object {
+          "column": 3,
+          "line": 26,
+        },
+        "start": Object {
+          "column": -1,
+          "line": 26,
+        },
+      },
+      "line": 26,
+      "loc": Object {
+        "end": Object {
+          "column": 3,
+          "line": 26,
+        },
+        "start": Object {
+          "column": -1,
+          "line": 26,
+        },
+      },
+      "name": "t.setCounter",
+    },
   },
   "s": Object {
     "0": 1,
     "1": 1,
-    "10": 2,
-    "11": 2,
-    "12": 2,
-    "13": 2,
-    "14": 2,
-    "15": 2,
-    "16": 2,
-    "17": 2,
-    "18": 2,
-    "19": 2,
+    "10": 1,
+    "11": 1,
+    "12": 1,
+    "13": 1,
+    "14": 1,
+    "15": 1,
+    "16": 1,
+    "17": 1,
+    "18": 1,
+    "19": 1,
     "2": 1,
-    "20": 2,
-    "21": 2,
-    "22": 2,
-    "23": 2,
-    "24": 2,
-    "25": 1,
+    "20": 1,
+    "21": 1,
+    "22": 1,
+    "23": 1,
+    "24": 1,
+    "25": 0,
     "26": 1,
     "27": 1,
     "28": 1,
@@ -2882,7 +2963,7 @@ Object {
     "47": 1,
     "48": 1,
     "49": 1,
-    "5": 2,
+    "5": 1,
     "50": 1,
     "51": 1,
     "52": 1,
@@ -2893,7 +2974,7 @@ Object {
     "57": 0,
     "58": 0,
     "59": 0,
-    "6": 2,
+    "6": 1,
     "60": 0,
     "61": 0,
     "62": 0,
@@ -2904,7 +2985,7 @@ Object {
     "67": 0,
     "68": 0,
     "69": 0,
-    "7": 2,
+    "7": 1,
     "70": 0,
     "71": 0,
     "72": 1,
@@ -2915,11 +2996,11 @@ Object {
     "77": 1,
     "78": 1,
     "79": 1,
-    "8": 2,
+    "8": 1,
     "80": 1,
     "81": 1,
     "82": 1,
-    "9": 2,
+    "9": 1,
   },
   "statementMap": Object {
     "0": Object {
