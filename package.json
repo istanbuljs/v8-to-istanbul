@@ -25,7 +25,7 @@
   "author": "Ben Coe <ben@npmjs.com>",
   "license": "ISC",
   "dependencies": {
-    "@jridgewell/trace-mapping": "^0.3.7",
+    "@jridgewell/trace-mapping": "^0.3.12",
     "@types/istanbul-lib-coverage": "^2.0.1",
     "convert-source-map": "^1.6.0"
   },
