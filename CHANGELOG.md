@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.0.1](https://github.com/istanbuljs/v8-to-istanbul/compare/v9.0.0...v9.0.1) (2022-06-20)
+
+
+### Bug Fixes
+
+* update `@jridgewell/trace-mapping` ([#194](https://github.com/istanbuljs/v8-to-istanbul/issues/194)) ([83d3ea2](https://github.com/istanbuljs/v8-to-istanbul/commit/83d3ea29648012fef3a5c379fa04d8bfc53f3fd2))
+
 ## [9.0.0](https://github.com/istanbuljs/v8-to-istanbul/compare/v8.1.1...v9.0.0) (2022-04-20)
 
 
