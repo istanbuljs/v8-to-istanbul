@@ -9,6 +9,13 @@ describe('range', () => {
     it('can deal with empty arrays', () => {
       sliceRange([], 0, 1).should.eql([])
     })
+    it('can deal with out of range indexes', () => {
+      const LINES = [
+        { startCol: 0, endCol: 3 }
+      ]
+      sliceRange(LINES, 0, -1).should.eql([])
+      sliceRange(LINES, 5, 3).should.eql([])
+    })
     it('can find lines that match exactly', () => {
       const THREE_LINES = [
         { startCol: 0, endCol: 10 },
