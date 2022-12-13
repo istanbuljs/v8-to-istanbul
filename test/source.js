@@ -128,5 +128,43 @@ describe('Source', () => {
       source.lines[8].ignore.should.equal(false)
       source.lines[9].ignore.should.equal(false)
     })
+
+    it('ignore hint accepts other text content', () => {
+      const sourceRaw = `
+      const a = 33
+
+      /* c8 ignore next -- reasoning why this is ignored */
+      const b = 99
+
+      /* c8 ignore start: reasoning here */
+      function ignoreMe() {
+        // ...
+      }
+      /* c8 ignore stop -- @preserve */
+
+      const c = a ? true /* c8 ignore next reasoning here */ : false
+
+      /* c8 ignore next 2 -- ignores next two lines */
+      const a = 33
+      const a = 99
+      `
+      const source = new CovSource(sourceRaw, 0)
+      source.lines[1].ignore.should.equal(false)
+      source.lines[2].ignore.should.equal(false)
+      source.lines[3].ignore.should.equal(true)
+      source.lines[4].ignore.should.equal(true)
+      source.lines[5].ignore.should.equal(false)
+      source.lines[6].ignore.should.equal(true)
+      source.lines[7].ignore.should.equal(true)
+      source.lines[8].ignore.should.equal(true)
+      source.lines[9].ignore.should.equal(true)
+      source.lines[10].ignore.should.equal(true)
+      source.lines[11].ignore.should.equal(false)
+      source.lines[12].ignore.should.equal(true)
+      source.lines[13].ignore.should.equal(false)
+      source.lines[14].ignore.should.equal(true)
+      source.lines[15].ignore.should.equal(true)
+      source.lines[16].ignore.should.equal(true)
+    })
   })
 })
