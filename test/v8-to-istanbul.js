@@ -207,6 +207,32 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
     assert(v8ToIstanbul.sourceMap !== undefined)
   })
 
+  it('empty coverage marks all lines uncovered', async () => {
+    const filename = require.resolve('./fixtures/scripts/uncovered.js')
+    const v8ToIstanbul = new V8ToIstanbul(filename)
+
+    await v8ToIstanbul.load()
+    v8ToIstanbul.applyCoverage([{
+      functionName: '(empty-report)',
+      ranges: [{
+        startOffset: 0,
+        endOffset: lstatSync(filename).size,
+        count: 0
+      }],
+      isBlockCoverage: true
+    }])
+
+    v8ToIstanbul.toIstanbul()[filename].s.should.eql({
+      0: 0,
+      1: 0,
+      2: 0,
+      3: 0,
+      4: 0,
+      5: 0,
+      6: 0
+    })
+  })
+
   // execute JavaScript files in fixtures directory; these
   // files contain the raw v8 output along with a set of
   // assertions. the original scripts can be found in the
