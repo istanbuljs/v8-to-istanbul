@@ -233,6 +233,42 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
     assert(v8ToIstanbul.sourceMap !== undefined)
   })
 
+  /*
+   * Empty coverages should not cause negative end columns when
+   * wrapperLength is used.
+   */
+  it('empty coverage with custom wrapperLength', async () => {
+    const filename = require.resolve('./fixtures/scripts/uncovered.js')
+    const fileSize = lstatSync(filename).size
+    const v8ToIstanbul = new V8ToIstanbul(filename, fileSize * 2)
+
+    await v8ToIstanbul.load()
+    v8ToIstanbul.applyCoverage([{
+      functionName: '(empty-report)',
+      ranges: [{
+        startOffset: 0,
+        endOffset: fileSize,
+        count: 0
+      }],
+      isBlockCoverage: true
+    }])
+
+    const { fnMap, branchMap } = v8ToIstanbul.toIstanbul()[filename]
+
+    Object.values(fnMap).forEach(fn => {
+      fn.decl.end.column.should.above(0)
+      fn.loc.end.column.should.above(0)
+    })
+
+    Object.values(branchMap).forEach(branch => {
+      branch.loc.end.column.should.above(0)
+
+      branch.locations.forEach(location => {
+        location.end.column.should.above(0)
+      })
+    })
+  })
+
   it('empty coverage marks all lines uncovered', async () => {
     const filename = require.resolve('./fixtures/scripts/uncovered.js')
     const v8ToIstanbul = new V8ToIstanbul(filename)
