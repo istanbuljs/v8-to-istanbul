@@ -166,5 +166,61 @@ describe('Source', () => {
       source.lines[15].ignore.should.equal(true)
       source.lines[16].ignore.should.equal(true)
     })
+
+    it('exclude lines between start and stop', () => {
+      const sourceRaw = `
+      const a = 33
+
+      /* c8 exclude start */
+      const b = 99
+
+      function excludeMe() {
+        // ...
+      }
+      /* c8 exclude stop */
+
+      const a = 33
+      `
+      const source = new CovSource(sourceRaw, 0)
+      source.lines.findIndex(({ line }) => line === 2).should.equal(1)
+      source.lines.findIndex(({ line }) => line === 3).should.equal(2)
+      source.lines.findIndex(({ line }) => line === 4).should.equal(-1)
+      source.lines.findIndex(({ line }) => line === 5).should.equal(-1)
+      source.lines.findIndex(({ line }) => line === 6).should.equal(-1)
+      source.lines.findIndex(({ line }) => line === 7).should.equal(-1)
+      source.lines.findIndex(({ line }) => line === 8).should.equal(-1)
+      source.lines.findIndex(({ line }) => line === 9).should.equal(-1)
+      source.lines.findIndex(({ line }) => line === 10).should.equal(-1)
+      source.lines.findIndex(({ line }) => line === 11).should.equal(3)
+      source.lines.findIndex(({ line }) => line === 12).should.equal(4)
+    })
+
+    it('exclude stop without starting it and exclude all the rest of the lines', () => {
+      const sourceRaw = `
+      const a = 33
+      const b = 99
+
+      /* c8 exclude stop */
+      function foo() {
+        // ...
+      }
+      /* c8 exclude start */
+      const c = a
+      const a = 33
+      const a = 99
+      `
+      const source = new CovSource(sourceRaw, 0)
+      source.lines.findIndex(({ line }) => line === 2).should.equal(1)
+      source.lines.findIndex(({ line }) => line === 3).should.equal(2)
+      source.lines.findIndex(({ line }) => line === 4).should.equal(3)
+      source.lines.findIndex(({ line }) => line === 5).should.equal(-1)
+      source.lines.findIndex(({ line }) => line === 6).should.equal(4)
+      source.lines.findIndex(({ line }) => line === 7).should.equal(5)
+      source.lines.findIndex(({ line }) => line === 8).should.equal(6)
+      source.lines.findIndex(({ line }) => line === 9).should.equal(-1)
+      source.lines.findIndex(({ line }) => line === 10).should.equal(-1)
+      source.lines.findIndex(({ line }) => line === 11).should.equal(-1)
+      source.lines.findIndex(({ line }) => line === 12).should.equal(-1)
+    })
   })
 })
