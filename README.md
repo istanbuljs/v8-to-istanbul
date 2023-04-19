@@ -77,6 +77,25 @@ const myVariable = 99
 const os = process.platform === 'darwin' ? 'OSXy' /* c8 ignore next */ : 'Windowsy' 
 ```
 
+## Excluding Lines
+
+Sometimes you might find yourself wanting to exclude lines
+in your application (for example, perhaps you have your unit tests inside of a file
+you wish to check coverage of, but
+you don't want to include the tests in the report).
+
+To exclude lines, use the special comments `/* c8 exclude start */` and `/* c8 exclude stop */`.
+
+### Excluding all lines until told
+
+```js
+/* c8 exclude start */
+function excludeMe() {
+  // ...
+}
+/* c8 exclude stop */
+```
+
 ## Testing
 
 To execute tests, simply run:
