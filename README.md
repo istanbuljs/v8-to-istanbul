@@ -1,6 +1,6 @@
 # v8-to-istanbul
 
-[![Build Status](https://travis-ci.org/istanbuljs/v8-to-istanbul.svg?branch=master)](https://travis-ci.org/istanbuljs/v8-to-istanbul)
+[![Build Status](https://github.com/istanbuljs/v8-to-istanbul/actions/workflows/ci.yaml/badge.svg?branch=master)](https://github.com/istanbuljs/v8-to-istanbul/actions)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 ![nycrc config on GitHub](https://img.shields.io/nycrc/istanbuljs/v8-to-istanbul)
 
