@@ -139,6 +139,32 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
       }])
       Object.keys(v8ToIstanbul.toIstanbul()).should.eql(['/src/index.ts', '/src/utils.ts'].map(path.normalize))
     })
+
+    it('ignore hint marks statements of uncovered file as covered', async () => {
+      const filename = require.resolve('./fixtures/scripts/ignored.lines.js')
+      const source = readFileSync(filename, 'utf-8')
+      const v8ToIstanbul = new V8ToIstanbul(pathToFileURL(filename).href)
+      await v8ToIstanbul.load()
+
+      v8ToIstanbul.applyCoverage([
+        {
+          functionName: '(empty-report)',
+          ranges: [
+            {
+              startOffset: 0,
+              endOffset: source.length,
+              count: 0
+            }
+          ],
+          isBlockCoverage: true
+        }
+      ])
+
+      const coverageMap = v8ToIstanbul.toIstanbul()
+      const { s } = coverageMap[filename]
+
+      assert.deepStrictEqual(s, { 0: 1, 1: 1, 2: 1, 3: 1 })
+    })
   })
 
   describe('source map format edge cases', () => {
