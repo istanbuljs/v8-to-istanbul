@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.1.2](https://github.com/istanbuljs/v8-to-istanbul/compare/v9.1.1...v9.1.2) (2023-10-04)
+
+
+### Bug Fixes
+
+* upgrade `convert-source-map` ([#224](https://github.com/istanbuljs/v8-to-istanbul/issues/224)) ([d2cc490](https://github.com/istanbuljs/v8-to-istanbul/commit/d2cc49094ee4ed20a0df1a2e441b83e8dbb64c22))
+
 ## [9.1.1](https://github.com/istanbuljs/v8-to-istanbul/compare/v9.1.0...v9.1.1) (2023-10-04)
 
 
