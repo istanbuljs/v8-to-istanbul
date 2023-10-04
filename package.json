@@ -27,7 +27,7 @@
   "dependencies": {
     "@jridgewell/trace-mapping": "^0.3.12",
     "@types/istanbul-lib-coverage": "^2.0.1",
-    "convert-source-map": "^1.6.0"
+    "convert-source-map": "^2.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
