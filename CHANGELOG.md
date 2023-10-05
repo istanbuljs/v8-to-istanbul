@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.1.3](https://github.com/istanbuljs/v8-to-istanbul/compare/v9.1.2...v9.1.3) (2023-10-05)
+
+
+### Bug Fixes
+
+* no wrapperLength for empty coverage ([#210](https://github.com/istanbuljs/v8-to-istanbul/issues/210)) ([bde6de2](https://github.com/istanbuljs/v8-to-istanbul/commit/bde6de2f0c32c1b14e7eda850d2e6b65f8278ed5))
+
 ## [9.1.2](https://github.com/istanbuljs/v8-to-istanbul/compare/v9.1.1...v9.1.2) (2023-10-04)
 
 
