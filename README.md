@@ -40,13 +40,15 @@ Sometimes you might find yourself wanting to ignore uncovered lines
 in your application (for example, perhaps you run your tests in Linux, but
 there's code that only executes on Windows).
 
-To ignore lines, use the special comment `/* c8 ignore next */`.
+To ignore lines, use the special comment `/* v8 ignore next */`.
+
+**NOTE**: Before version `9.2.0` the ignore hint had to contain `c8` keyword, e.g. `/* c8 ignore ...`.
 
 ### ignoring the next line
 
 ```js
 const myVariable = 99
-/* c8 ignore next */
+/* v8 ignore next */
 if (process.platform === 'win32') console.info('hello world')
 ```
 
@@ -54,7 +56,7 @@ if (process.platform === 'win32') console.info('hello world')
 
 ```js
 const myVariable = 99
-/* c8 ignore next 3 */
+/* v8 ignore next 3 */
 if (process.platform === 'win32') {
   console.info('hello world')
 }
@@ -63,18 +65,18 @@ if (process.platform === 'win32') {
 ### ignoring all lines until told
 
 ```js
-/* c8 ignore start */
+/* v8 ignore start */
 function dontMindMe() {
   // ...
 }
-/* c8 ignore stop */
+/* v8 ignore stop */
 ```
 
 ### ignoring the same line as the comment
 
 ```js
 const myVariable = 99
-const os = process.platform === 'darwin' ? 'OSXy' /* c8 ignore next */ : 'Windowsy' 
+const os = process.platform === 'darwin' ? 'OSXy' /* v8 ignore next */ : 'Windowsy' 
 ```
 
 ## Testing
