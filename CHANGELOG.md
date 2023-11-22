@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.2.0](https://github.com/istanbuljs/v8-to-istanbul/compare/v9.1.3...v9.2.0) (2023-11-22)
+
+
+### Features
+
+* support `/* v8 ignore` ignore hints ([#228](https://github.com/istanbuljs/v8-to-istanbul/issues/228)) ([f8757c0](https://github.com/istanbuljs/v8-to-istanbul/commit/f8757c0c25084a6c60c96a7d9699e67a6e358b14))
+
 ## [9.1.3](https://github.com/istanbuljs/v8-to-istanbul/compare/v9.1.2...v9.1.3) (2023-10-05)
 
 
