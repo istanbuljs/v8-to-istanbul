@@ -30,7 +30,7 @@
     "convert-source-map": "^2.0.0"
   },
   "devDependencies": {
-    "@types/node": "^18.0.0",
+    "@types/node": "^20.0.0",
     "c8": "^7.2.1",
     "semver": "^7.3.2",
     "should": "13.2.3",
