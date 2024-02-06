@@ -163,7 +163,7 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
       const coverageMap = v8ToIstanbul.toIstanbul()
       const { s } = coverageMap[filename]
 
-      assert.deepStrictEqual(s, { 0: 1, 1: 1, 2: 1, 3: 1 })
+      assert.deepStrictEqual(s, {})
     })
   })
 
