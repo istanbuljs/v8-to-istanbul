@@ -23,7 +23,7 @@ module.exports = async (fixture) => {
   coverageIstanbul = coverageIstanbul[Object.keys(coverageIstanbul)[0]]
 
   describe(fixture.describe, () => {
-    it('matches snapshot', () => {
+    it(`matches snapshot ${fixture.describe}`, () => {
       delete coverageIstanbul.path
       t.matchSnapshot(coverageIstanbul, `must match ${fixture.describe} snapshot`)
     })

@@ -96,6 +96,24 @@ describe('Source', () => {
         source.lines[3].ignore.should.equal(true)
       })
 
+      it('ignores a multiple javascript comment', () => {
+        const sourceRaw = `
+        /*  mutltiple commment
+         *  mutltiple commment
+         *  mutltiple commment
+         */
+        const a = 33
+        const a = 99
+        `
+        const source = new CovSource(sourceRaw, 0)
+        source.lines[1].ignore.should.equal(true)
+        source.lines[2].ignore.should.equal(true)
+        source.lines[3].ignore.should.equal(true)
+        source.lines[4].ignore.should.equal(true)
+        source.lines[5].ignore.should.equal(false)
+        source.lines[6].ignore.should.equal(false)
+      })
+
       it(`ignores a line that contains /* ${prefix} ignore next */`, () => {
         const sourceRaw = `
         const a = foo ? true /* ${prefix} ignore next */ : false
@@ -115,7 +133,7 @@ describe('Source', () => {
         /* ${prefix} ignore stop */
 
         function doNotIgnoreMe() {
-          // ...
+          return a + b
         }
         `
         const source = new CovSource(sourceRaw, 0)
@@ -124,7 +142,7 @@ describe('Source', () => {
         source.lines[3].ignore.should.equal(true)
         source.lines[4].ignore.should.equal(true)
         source.lines[5].ignore.should.equal(true)
-        source.lines[6].ignore.should.equal(false)
+        source.lines[6].ignore.should.equal(true)
         source.lines[7].ignore.should.equal(false)
         source.lines[8].ignore.should.equal(false)
         source.lines[9].ignore.should.equal(false)
@@ -151,18 +169,18 @@ describe('Source', () => {
         `
         const source = new CovSource(sourceRaw, 0)
         source.lines[1].ignore.should.equal(false)
-        source.lines[2].ignore.should.equal(false)
+        source.lines[2].ignore.should.equal(true)
         source.lines[3].ignore.should.equal(true)
         source.lines[4].ignore.should.equal(true)
-        source.lines[5].ignore.should.equal(false)
+        source.lines[5].ignore.should.equal(true)
         source.lines[6].ignore.should.equal(true)
         source.lines[7].ignore.should.equal(true)
         source.lines[8].ignore.should.equal(true)
         source.lines[9].ignore.should.equal(true)
         source.lines[10].ignore.should.equal(true)
-        source.lines[11].ignore.should.equal(false)
+        source.lines[11].ignore.should.equal(true)
         source.lines[12].ignore.should.equal(true)
-        source.lines[13].ignore.should.equal(false)
+        source.lines[13].ignore.should.equal(true)
         source.lines[14].ignore.should.equal(true)
         source.lines[15].ignore.should.equal(true)
         source.lines[16].ignore.should.equal(true)
