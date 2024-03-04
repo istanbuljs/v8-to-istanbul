@@ -295,6 +295,25 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
     })
   })
 
+  it('empty coverage for tsx files with plugin', async () => {
+    const filename = require.resolve('./fixtures/scripts/ignore lines.tsx')
+    const plugin = require('../lib/plugin')
+    const v8ToIstanbul = new V8ToIstanbul(filename, undefined, undefined, undefined, plugin)
+
+    await v8ToIstanbul.load()
+    v8ToIstanbul.applyCoverage([{
+      functionName: '(empty-report)',
+      ranges: [{
+        startOffset: 0,
+        endOffset: lstatSync(filename).size,
+        count: 0
+      }],
+      isBlockCoverage: true
+    }])
+
+    v8ToIstanbul.toIstanbul()[filename].s.should.eql({ 3: 0, 5: 0, 8: 0, 9: 0 })
+  })
+
   // execute JavaScript files in fixtures directory; these
   // files contain the raw v8 output along with a set of
   // assertions. the original scripts can be found in the

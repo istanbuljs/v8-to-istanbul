@@ -27,7 +27,8 @@
   "dependencies": {
     "@jridgewell/trace-mapping": "^0.3.12",
     "@types/istanbul-lib-coverage": "^2.0.1",
-    "convert-source-map": "^2.0.0"
+    "convert-source-map": "^2.0.0",
+    "vlq": "^2.0.4"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
@@ -37,6 +38,9 @@
     "source-map": "^0.7.3",
     "standard": "^17.0.0",
     "tap": "^16.0.0"
+  },
+  "optionalDependencies": {
+    "esbuild": "^0.20.1"
   },
   "engines": {
     "node": ">=10.12.0"
