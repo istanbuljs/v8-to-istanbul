@@ -385,8 +385,6 @@ Object {
     "31": 1,
     "32": 1,
     "33": 1,
-    "34": 1,
-    "35": 1,
     "36": 1,
     "37": 1,
     "4": 1,
@@ -675,26 +673,6 @@ Object {
       "start": Object {
         "column": 0,
         "line": 34,
-      },
-    },
-    "34": Object {
-      "end": Object {
-        "column": 22,
-        "line": 35,
-      },
-      "start": Object {
-        "column": 0,
-        "line": 35,
-      },
-    },
-    "35": Object {
-      "end": Object {
-        "column": 28,
-        "line": 36,
-      },
-      "start": Object {
-        "column": 0,
-        "line": 36,
       },
     },
     "36": Object {
