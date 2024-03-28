@@ -2,6 +2,7 @@
 
 const CovSource = require('../lib/source')
 const { TraceMap } = require('@jridgewell/trace-mapping')
+const assert = require('assert')
 
 require('tap').mochaGlobals()
 require('should')
@@ -67,6 +68,100 @@ describe('Source', () => {
         names: []
       })
       source.offsetToOriginalRelative(sourceMap, 25, 97).should.deepEqual({})
+    })
+
+    it('ignores empty lines', () => {
+      const sourceRaw = `\
+function add(a: number, b: number) {
+  /**
+   * Multi
+   * line
+   * comment
+   */
+  if (a === 2 && b === 3) {
+    // This line should NOT be covered
+    return 5;
+  }
+
+  type TypescriptTypings = 1 | 2;
+
+  if (a === 1 && b === 1) {
+    // Comment
+    return 2;
+  }
+
+  interface MoreCompileTimeCode {
+    should: {
+      be: {
+        excluded: true;
+      };
+    };
+  }
+
+  return a + b;
+}
+
+add(2, 5);
+`
+      const sourceMap = new TraceMap({
+        version: 3,
+        file: 'index.js',
+        sourceRoot: '',
+        sources: [
+          '../src/index.ts'
+        ],
+        names: [],
+        mappings: ';AAAA,SAAS,GAAG,CAAC,CAAS,EAAE,CAAS;IAM/B,IAAI,CAAC,KAAK,CAAC,IAAI,CAAC,KAAK,CAAC,EAAE,CAAC;QAEvB,OAAO,CAAC,CAAC;IACX,CAAC;IAID,IAAI,CAAC,KAAK,CAAC,IAAI,CAAC,KAAK,CAAC,EAAE,CAAC;QAEvB,OAAO,CAAC,CAAC;IACX,CAAC;IAUD,OAAO,CAAC,GAAG,CAAC,CAAC;AACf,CAAC;AAED,GAAG,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC'
+      }
+      )
+
+      const source = new CovSource(sourceRaw, 0, sourceMap)
+      const lines = source.lines
+
+      assert.equal(lines[0].ignore, false)
+
+      // Multiline comment
+      assert.equal(lines[1].ignore, true)
+      assert.equal(lines[2].ignore, true)
+      assert.equal(lines[3].ignore, true)
+      assert.equal(lines[4].ignore, true)
+      assert.equal(lines[5].ignore, true)
+
+      // If-block with inline comment
+      assert.equal(lines[6].ignore, false)
+      assert.equal(lines[7].ignore, true)
+      assert.equal(lines[8].ignore, false)
+      assert.equal(lines[9].ignore, false)
+      assert.equal(lines[10].ignore, true)
+
+      // Typescript Type
+      assert.equal(lines[11].ignore, true)
+
+      // If-block with inline comment
+      assert.equal(lines[12].ignore, true)
+      assert.equal(lines[13].ignore, false)
+      assert.equal(lines[14].ignore, true)
+      assert.equal(lines[15].ignore, false)
+      assert.equal(lines[16].ignore, false)
+      assert.equal(lines[17].ignore, true)
+
+      // Typescript interface
+      assert.equal(lines[18].ignore, true)
+      assert.equal(lines[19].ignore, true)
+      assert.equal(lines[20].ignore, true)
+      assert.equal(lines[21].ignore, true)
+      assert.equal(lines[22].ignore, true)
+      assert.equal(lines[23].ignore, true)
+      assert.equal(lines[24].ignore, true)
+      assert.equal(lines[25].ignore, true)
+
+      // Return statement + function closing
+      assert.equal(lines[26].ignore, false)
+      assert.equal(lines[27].ignore, false)
+
+      // Function call
+      assert.equal(lines[28].ignore, true)
+      assert.equal(lines[29].ignore, false)
     })
   })
 
