@@ -264,4 +264,102 @@ add(2, 5);
       })
     })
   }
+
+  describe('ignore hint using node:coverage', () => {
+    it('ignores the next line if /* node:coverage ignore next */ is on its own line', () => {
+      const sourceRaw = `
+      const a = 33
+      /* node:coverage ignore next */
+      const a = 99
+      `
+      const source = new CovSource(sourceRaw, 0)
+      source.lines[1].ignore.should.equal(false)
+      source.lines[2].ignore.should.equal(true)
+      source.lines[3].ignore.should.equal(true)
+    })
+
+    it('ignores the next N lines if /* node:coverage ignore next N */ is used', () => {
+      const sourceRaw = `
+      /* node:coverage ignore next 2 */
+      const a = 33
+      const a = 99
+      `
+      const source = new CovSource(sourceRaw, 0)
+      source.lines[1].ignore.should.equal(true)
+      source.lines[2].ignore.should.equal(true)
+      source.lines[3].ignore.should.equal(true)
+    })
+
+    it('ignores a line that contains /* node:coverage ignore next */', () => {
+      const sourceRaw = `
+      const a = foo ? true /* node:coverage ignore next */ : false
+      const b = 99
+      `
+      const source = new CovSource(sourceRaw, 0)
+      source.lines[1].ignore.should.equal(true)
+      source.lines[2].ignore.should.equal(false)
+    })
+
+    it('ignores lines between disable and enable', () => {
+      const sourceRaw = `
+      /* node:coverage disable */
+      function ignoreMe() {
+        // ...
+      }
+      /* node:coverage enable */
+
+      function doNotIgnoreMe() {
+        // ...
+      }
+      `
+      const source = new CovSource(sourceRaw, 0)
+      source.lines[1].ignore.should.equal(true)
+      source.lines[2].ignore.should.equal(true)
+      source.lines[3].ignore.should.equal(true)
+      source.lines[4].ignore.should.equal(true)
+      source.lines[5].ignore.should.equal(true)
+      source.lines[6].ignore.should.equal(false)
+      source.lines[7].ignore.should.equal(false)
+      source.lines[8].ignore.should.equal(false)
+      source.lines[9].ignore.should.equal(false)
+    })
+
+    it('ignore hint accepts other text content', () => {
+      const sourceRaw = `
+      const a = 33
+
+      /* node:coverage ignore next -- reasoning why this is ignored */
+      const b = 99
+
+      /* node:coverage disable: reasoning here */
+      function ignoreMe() {
+        // ...
+      }
+      /* node:coverage enable -- @preserve */
+
+      const c = a ? true /* node:coverage ignore next reasoning here */ : false
+
+      /* node:coverage ignore next 2 -- ignores next two lines */
+      const a = 33
+      const a = 99
+      `
+      const source = new CovSource(sourceRaw, 0)
+      source.lines[1].ignore.should.equal(false)
+      source.lines[2].ignore.should.equal(false)
+      source.lines[3].ignore.should.equal(true)
+      source.lines[4].ignore.should.equal(true)
+      source.lines[5].ignore.should.equal(false)
+      source.lines[6].ignore.should.equal(true)
+      source.lines[7].ignore.should.equal(true)
+      source.lines[8].ignore.should.equal(true)
+      source.lines[9].ignore.should.equal(true)
+      source.lines[10].ignore.should.equal(true)
+      source.lines[11].ignore.should.equal(false)
+      source.lines[12].ignore.should.equal(true)
+      source.lines[13].ignore.should.equal(false)
+      source.lines[14].ignore.should.equal(true)
+      source.lines[15].ignore.should.equal(true)
+      source.lines[16].ignore.should.equal(true)
+    })
+  })
 })
