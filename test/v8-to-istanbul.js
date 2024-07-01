@@ -140,7 +140,7 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
       Object.keys(v8ToIstanbul.toIstanbul()).should.eql(['/src/index.ts', '/src/utils.ts'].map(path.normalize))
     })
 
-    it('ignore hint marks statements of uncovered file as covered', async () => {
+    it('ignore hint marks statements of uncovered file as excluded', async () => {
       const filename = require.resolve('./fixtures/scripts/ignored.lines.js')
       const source = readFileSync(filename, 'utf-8')
       const v8ToIstanbul = new V8ToIstanbul(pathToFileURL(filename).href)
@@ -163,7 +163,19 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
       const coverageMap = v8ToIstanbul.toIstanbul()
       const { s } = coverageMap[filename]
 
-      assert.deepStrictEqual(s, { 0: 1, 1: 1, 2: 1, 3: 1 })
+      assert.equal(s[0], 0)
+      assert.equal(s[1], 0)
+      assert.equal(s[2], 0)
+      assert.equal(s[3], 0)
+      assert.equal(s[4], 0)
+      assert.equal(s[5], undefined) // Line 6
+      assert.equal(s[6], undefined)
+      assert.equal(s[7], undefined)
+      assert.equal(s[8], undefined)
+      assert.equal(s[9], undefined) // Line 10
+      assert.equal(s[10], 0)
+      assert.equal(s[11], 0)
+      assert.equal(s[12], 0)
     })
   })
 
