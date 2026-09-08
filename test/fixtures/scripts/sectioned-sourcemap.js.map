@@ -1,0 +1,26 @@
+{
+  "version": 3,
+  "file": "sectioned-sourcemap.js",
+  "sections": [
+    {
+      "offset": { "line": 0, "column": 0 },
+      "map": {
+        "version": 3,
+        "sources": ["sectioned-a.js"],
+        "sourcesContent": ["const a = 1\n"],
+        "names": [],
+        "mappings": "AAAA"
+      }
+    },
+    {
+      "offset": { "line": 1, "column": 0 },
+      "map": {
+        "version": 3,
+        "sources": ["sectioned-b.js"],
+        "sourcesContent": ["const b = 2\n"],
+        "names": [],
+        "mappings": "AAAA"
+      }
+    }
+  ]
+}

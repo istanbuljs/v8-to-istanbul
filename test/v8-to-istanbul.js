@@ -203,6 +203,27 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
       v8ToIstanbul.covSources.length.should.equal(3)
       Object.keys(v8ToIstanbul.toIstanbul()).should.eql(['/webpack/bootstrap', '/src/index.ts', '/src/utils.ts'].map(path.normalize))
     })
+
+    it('should handle sectioned index source maps', async () => {
+      const v8ToIstanbul = new V8ToIstanbul(
+        pathToFileURL(require.resolve('./fixtures/scripts/sectioned-sourcemap.js')).href,
+        0
+      )
+      await v8ToIstanbul.load()
+
+      v8ToIstanbul.covSources.length.should.equal(2)
+      v8ToIstanbul.applyCoverage([{
+        functionName: 'fake',
+        ranges: [{
+          startOffset: 0,
+          endOffset: 1
+        }]
+      }])
+      Object.keys(v8ToIstanbul.toIstanbul()).map(file => path.basename(file)).sort().should.eql([
+        'sectioned-a.js',
+        'sectioned-b.js'
+      ])
+    })
   })
 
   it('test no sourcemap content', async () => {
