@@ -61,6 +61,33 @@ ${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
       v8ToIstanbul.path.should.equal(absoluteSourceFilePath)
     })
 
+    it('handles source maps with file URL sourceRoot', async () => {
+      const sourceFileName = 'sourcemap-source.js'
+      const sourceRoot = path.dirname(require.resolve(`./fixtures/scripts/${sourceFileName}`))
+      const absoluteSourceFilePath = path.join(sourceRoot, sourceFileName)
+      const map = new sourcemap.SourceMapGenerator({
+        file: sourceFileName,
+        sourceRoot: pathToFileURL(sourceRoot).href
+      })
+      map.addMapping({
+        source: sourceFileName,
+        original: { line: 1, column: 1 },
+        generated: { line: 1, column: 1 }
+      })
+      map.setSourceContent(sourceFileName, readFileSync(absoluteSourceFilePath).toString())
+      const base64Sourcemap = Buffer.from(map.toString()).toString('base64')
+      const source = `const foo = "bar";
+${'//'}${'#'} sourceMappingURL=data:application/json;base64,${base64Sourcemap}
+`
+      const tmpPath = path.join(os.tmpdir(), crypto.randomBytes(4).readUInt32LE(0) + '.js')
+      writeFileSync(tmpPath, source)
+
+      const v8ToIstanbul = new V8ToIstanbul(tmpPath)
+      await v8ToIstanbul.load()
+
+      v8ToIstanbul.path.should.equal(absoluteSourceFilePath)
+    })
+
     it('handles sourceContent', async () => {
       const sourceFileName = 'sourcemap-source.js'
       const sourceRoot = path.dirname(require.resolve(`./fixtures/scripts/${sourceFileName}`))
